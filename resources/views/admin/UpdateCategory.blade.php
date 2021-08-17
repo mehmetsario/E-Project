@@ -26,7 +26,7 @@
                         <h4 class="mb30">
                             Categories Table
                         </h4>
-                        <table class="table table-striped">
+                        <table class="table table-striped table-bordered mb-0 text-sm-nowrap text-lg-nowrap text-xl-nowrap">
                             <thead>
                             <tr>
                                 <th>#</th>
