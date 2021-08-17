@@ -136,7 +136,7 @@
                                             </div>
                                             <div class="add-actions">
                                                 <ul class="add-actions-link">
-                                                    <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
+{{--                                                    <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>--}}
                                                     <li><a href="#"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
