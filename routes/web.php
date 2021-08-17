@@ -42,10 +42,17 @@ Route::get('/AddCatogery', function () {
 
 Route::get('/UpdateCategory', function () {
     return view('admin.UpdateCategory');
-})->name('UpdateCategory');;
+})->name('UpdateCategory');
+Route::get('/AddProducts', function () {
+    return view('admin.AddProduct');
+})->name('AddProduct');
+
+
+Route::get('/UpdateProducts',[\App\Http\Controllers\ProductController::class,'viewProduct'])->name('UpdateProducts');
 
 Route::get('/dis', function () {
     return view('admin.toast');
 });
 
 Route::resource('categories',\App\Http\Controllers\CategoryController::class);
+Route::resource('products',\App\Http\Controllers\ProductController::class);

@@ -132,5 +132,10 @@ class ProductController extends Controller
 
         return view('shop',['items'=>$data,'Category'=>$data2]);
     }
+    public function viewProduct(){
+        $data=Product::all();
+
+        return view('admin.UpdateProduct',['item'=>$data]);
+    }
 
 }

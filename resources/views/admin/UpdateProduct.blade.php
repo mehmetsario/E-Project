@@ -12,7 +12,7 @@
 				<div class="breadcrumb-header justify-content-between text-left">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">Categories</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ Update Category</span>
+							<h4 class="content-title mb-0 my-auto">Products</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ Update Product</span>
 						</div>
 					</div>
 
@@ -21,68 +21,47 @@
 @endsection
 @section('content')
 				<!-- row -->
-                <div class="container">
-                    <div class="col-lg-6 mb40">
-                        <h4 class="mb30">
-                            Categories Table
-                        </h4>
-                        <table class="table table-striped table-bordered mb-0 text-sm-nowrap text-lg-nowrap text-xl-nowrap">
-                            <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>ID</th>
-                                <th>Category Name</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($categories as $category)
-                                <form method="post" action="{{route('categories.destroy',$category->id)}}">
-                                    @method('DELETE')
-                                    @csrf
-                                    <tr>
-                                        <td><button type="submit"  data-bs-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></button>
-                                            <a href="#"   data-toggle="modal" data-target="#Modal{{$category->id}}" data-bs-toggle="tooltip" title="Edit"><i class="fas fa-edit"></i></a>
-
-                                        </td>
-                                        <td>{{$category->id}}</td>
-                                        <td>{{$category->categoryName}}</td>
-
-                                    </tr>
-                                </form>
-                                <!-- Modal -->
-                                <div class="modal fade" id="Modal{{$category->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="Modal{{$category->id}}">Modal title</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <form method="POST" action="{{route('categories.update',$category->id)}}">
-                                                @csrf
-                                                @method('PUT')
-                                            <div class="modal-body">
-                                                <input type="text" class="form-control"  name="categoryName" placeholder="Enter Category Name" required autocomplete="false" value="{{$category->categoryName}}">
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                                                <button type="submit" class="btn btn-primary">Save changes</button>
-
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            @endforeach
-                            </tbody>
-                        </table>
-
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
                     </div>
+                @endif
 
-                </div>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>category</th>
+
+                        <th>image_small</th>
+                        <th width="280px">Action</th>
+                    </tr>
+                    @foreach ($item as $product)
+                        <tr>
+                            <td>{{ $product->id }}</td>
+                            <td>{{ $product->name }}</td>
+                            <td>{{ $product->price }}</td>
+                            <td>{{ $product->description }}</td>
+                            <td>{{ $product->category_id }}</td>
+
+                            <td><img src="{{ $product->image_small }}" width="100px"> </td>
+{{--                            <td><img src="/image/{{ $product->image }}" width="100px"></td>--}}
+                            <td>
+                                <form action="{{ route('products.destroy',$product->id) }}" method="POST">
+                                    
+                                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+
+                                    @csrf
+                                    @method('DELETE')
+
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
 				<!-- row -->
                 <!-- Button trigger modal -->
 

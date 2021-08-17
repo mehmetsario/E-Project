@@ -71,9 +71,13 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request ,$id)
     {
-        //
+
+        $data=Category::findorfail($id);
+        $data->CategoryName=$request->categoryName;
+        $data->save();
+        return Redirect::back();
     }
 
     /**
