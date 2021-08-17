@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ProductController extends Controller
 {
@@ -83,5 +85,43 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+    function addToCart(Product $productId){
+        if(session()->has('cart')){
+            $cart=new Cart(session()->get('cart'));
+
+        }else{
+            $cart= new Cart();
+        }
+        $cart->add($productId);
+//        dd($cart);
+        session()->put('cart',$cart);
+//       dd(session()->get('cart')->items[1]);
+        return Redirect::back()->with('success','Product was Added');
+
+    }
+    function destroyCart (Product $productId){
+        $cart=new Cart(session()->get('cart'));
+        $cart->remove($productId->id);
+        if($cart->totalQty <=0){
+            session()->forget('cart');
+        }else{
+            session()->put('cart',$cart);
+        }
+        return Redirect::back()->with('success','Product was removed');
+
+    }
+    function updateQty (Request $request,Product $productId){
+//        dd($request);
+        $request->validate([
+            'qty'=>'required|numeric|min:1'
+        ]);
+        $cart=new Cart(session()->get('cart'));
+        $cart->updateQty($productId->id,$request->qty);
+//
+        session()->put('cart',$cart);
+
+        return Redirect::back()->with('success','Product was Updated');
+
     }
 }
