@@ -124,4 +124,11 @@ class ProductController extends Controller
         return Redirect::back()->with('success','Product was Updated');
 
     }
+    public function shop()
+    {
+        $data=Product::all();
+
+        return view('shop',['items'=>$data]);
+    }
+
 }

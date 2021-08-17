@@ -20,3 +20,19 @@ Route::get('/',[\App\Http\Controllers\ProductController::class,'index'])->name('
 Route::get('/addToCart/{productId}',[\App\Http\Controllers\ProductController::class,'addToCart'])->name('cart.add');
 Route::delete('/DeleteFromCart/{productId}',[\App\Http\Controllers\ProductController::class,'destroyCart'])->name('cart.delete');
 Route::put('/UpdateFromCart/{productId}',[\App\Http\Controllers\ProductController::class,'updateQty'])->name('cart.update');
+Route::get('/shop',[\App\Http\Controllers\ProductController::class,'shop']);
+Route::get('/cart', function () {
+    return view('cart');
+});
+Route::get('/checkout', function () {
+    return view('checkout');
+});
+Route::get('/admin', function () {
+    return view('admin.index');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/about', function () {
+    return view('aboutus');
+});
