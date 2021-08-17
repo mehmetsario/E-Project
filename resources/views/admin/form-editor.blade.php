@@ -1,10 +1,10 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('css')
 <!--- Internal Select2 css-->
-<link href="{{URL::asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/admin/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
 <!--Internal  Quill css -->
-<link href="{{URL::asset('assets/plugins/quill/quill.snow.css')}}" rel="stylesheet">
-<link href="{{URL::asset('assets/plugins/quill/quill.bubble.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/admin/plugins/quill/quill.snow.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/admin/plugins/quill/quill.bubble.css')}}" rel="stylesheet">
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
@@ -150,9 +150,9 @@
 @endsection
 @section('js')
 <!--Internal  Select2 js -->
-<script src="{{URL::asset('assets/plugins/select2/js/select2.min.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/select2/js/select2.min.js')}}"></script>
 <!--Internal quill js -->
-<script src="{{URL::asset('assets/plugins/quill/quill.min.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/quill/quill.min.js')}}"></script>
 <!-- Internal Form-editor js -->
-<script src="{{URL::asset('assets/js/form-editor.js')}}"></script>
+<script src="{{URL::asset('assets/admin/js/form-editor.js')}}"></script>
 @endsection

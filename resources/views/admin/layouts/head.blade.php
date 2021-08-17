@@ -1,5 +1,5 @@
 <!-- Title -->
-<title> Valex -  Premium dashboard ui bootstrap rwd admin html5 template </title>
+<title> Dashboard </title>
 <!-- Favicon -->
 <link rel="icon" href="{{URL::asset('assets/admin/img/brand/favicon.png')}}" type="image/x-icon"/>
 <!-- Icons css -->

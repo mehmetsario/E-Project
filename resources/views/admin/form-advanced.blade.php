@@ -1,15 +1,15 @@
-@extends('layouts.master')
+@extends('admin.layouts.master')
 @section('css')
 <!--- Internal Select2 css-->
-<link href="{{URL::asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/admin/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
 <!---Internal Fileupload css-->
-<link href="{{URL::asset('assets/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
+<link href="{{URL::asset('assets/admin/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
 <!---Internal Fancy uploader css-->
-<link href="{{URL::asset('assets/plugins/fancyuploder/fancy_fileupload.css')}}" rel="stylesheet" />
+<link href="{{URL::asset('assets/admin/plugins/fancyuploder/fancy_fileupload.css')}}" rel="stylesheet" />
 <!--Internal Sumoselect css-->
-<link rel="stylesheet" href="{{URL::asset('assets/plugins/sumoselect/sumoselect-rtl.css')}}">
+<link rel="stylesheet" href="{{URL::asset('assets/admin/plugins/sumoselect/sumoselect-rtl.css')}}">
 <!--Internal  TelephoneInput css-->
-<link rel="stylesheet" href="{{URL::asset('assets/plugins/telephoneinput/telephoneinput-rtl.css')}}">
+<link rel="stylesheet" href="{{URL::asset('assets/admin/plugins/telephoneinput/telephoneinput-rtl.css')}}">
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
@@ -243,7 +243,7 @@
 										<input type="file" class="dropify" data-height="200" />
 									</div>
 									<div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
-										<input type="file" class="dropify" data-default-file="{{URL::asset('assets/img/photos/1.jpg')}}" data-height="200"  />
+										<input type="file" class="dropify" data-default-file="{{URL::asset('assets/admin/img/photos/1.jpg')}}" data-height="200"  />
 									</div>
 									<div class="col-sm-12 col-md-4 mg-t-10 mg-sm-t-0">
 										<input type="file" class="dropify" disabled="disabled"  />
@@ -264,24 +264,24 @@
 @endsection
 @section('js')
 <!--Internal  Datepicker js -->
-<script src="{{URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/jquery-ui/ui/widgets/datepicker.js')}}"></script>
 <!-- Internal Select2 js-->
-<script src="{{URL::asset('assets/plugins/select2/js/select2.min.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/select2/js/select2.min.js')}}"></script>
 <!--Internal Fileuploads js-->
-<script src="{{URL::asset('assets/plugins/fileuploads/js/fileupload.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/fileuploads/js/file-upload.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fileuploads/js/fileupload.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fileuploads/js/file-upload.js')}}"></script>
 <!--Internal Fancy uploader js-->
-<script src="{{URL::asset('assets/plugins/fancyuploder/jquery.ui.widget.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/fancyuploder/jquery.fileupload.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/fancyuploder/jquery.iframe-transport.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/fancyuploder/jquery.fancy-fileupload.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/fancyuploder/fancy-uploader.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fancyuploder/jquery.ui.widget.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fancyuploder/jquery.fileupload.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fancyuploder/jquery.iframe-transport.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fancyuploder/jquery.fancy-fileupload.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/fancyuploder/fancy-uploader.js')}}"></script>
 <!--Internal  Form-elements js-->
-<script src="{{URL::asset('assets/js/advanced-form-elements.js')}}"></script>
-<script src="{{URL::asset('assets/js/select2.js')}}"></script>
+<script src="{{URL::asset('assets/admin/js/advanced-form-elements.js')}}"></script>
+<script src="{{URL::asset('assets/admin/js/select2.js')}}"></script>
 <!--Internal Sumoselect js-->
-<script src="{{URL::asset('assets/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/sumoselect/jquery.sumoselect.js')}}"></script>
 <!-- Internal TelephoneInput js-->
-<script src="{{URL::asset('assets/plugins/telephoneinput/telephoneinput.js')}}"></script>
-<script src="{{URL::asset('assets/plugins/telephoneinput/inttelephoneinput.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/telephoneinput/telephoneinput.js')}}"></script>
+<script src="{{URL::asset('assets/admin/plugins/telephoneinput/inttelephoneinput.js')}}"></script>
 @endsection

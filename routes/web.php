@@ -36,3 +36,16 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('aboutus');
 });
+Route::get('/AddCatogery', function () {
+    return view('admin.addCatogery');
+})->name('addCat');;
+
+Route::get('/UpdateCategory', function () {
+    return view('admin.UpdateCategory');
+})->name('UpdateCategory');;
+
+Route::get('/dis', function () {
+    return view('admin.toast');
+});
+
+Route::resource('categories',\App\Http\Controllers\CategoryController::class);

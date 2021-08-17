@@ -117,7 +117,7 @@
 
   .hor-menu .horizontalMenu > .horizontalMenu-list > li > a {
     &.active {
-        color:#fff;
+         color:#fff;
 		background: transparent;
     }
 
@@ -464,7 +464,7 @@ body.body-style1 {
 
 .body-style1 .app-sidebar {
   box-shadow: none;
-  border-left:1px solid rgb(224, 230, 245) !important;
+  border-right:1px solid rgb(224, 230, 245) !important;
 }
 
 body.light-theme.body-style1 {
@@ -618,7 +618,7 @@ body.dark-theme.body-style1 {
   &.body-style1 {
     .app-sidebar {
       border-top: 1px solid transparent;
-	  border-left:1px solid rgba(224, 230, 245, 0.1) !important;
+	  border-right:1px solid rgba(224, 230, 245, 0.1) !important;
       box-shadow: none;
     }
 
@@ -631,7 +631,7 @@ body.dark-theme.body-style1 {
 
 .light-theme.body-style1 {
   .app-sidebar {
-    border-left: 1px solid #e8ebf1;
+    border-right: 1px solid #e8ebf1;
     border-top: 1px solid transparent;
     box-shadow: none;
   }
@@ -651,14 +651,14 @@ body.dark-theme.body-style1 {
 .leftmenu-color {
   .app-sidebar {
     background: $primary;
-    border-left: 1px solid$primary;
+    border-right: 1px solid$primary;
     border-top: 1px solid$primary;
   }
 	
   .main-sidebar-header {
 		background: $primary;
 		border-bottom: 1px solid rgba(234, 232, 241, 0.1);
-		border-left: 1px solid #1666e6;
+		border-right: 1px solid #1666e6;
 	}
 	
   .slide.is-expanded {
@@ -732,7 +732,7 @@ body.dark-theme.body-style1 {
 
 .dark-theme.leftmenu-color .app-sidebar {
   background: $primary;
-  border-left: 1px solid$white-2;
+  border-right: 1px solid$white-2;
   border-top: 1px solid$white-2;
 }
 
@@ -936,9 +936,6 @@ body.dark-theme.body-style1 {
 	.leftmenu-dark.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .mobile-logo.icon-dark {
 		display: none !important;
 	}
-	.leftmenu-color.app.sidebar-mini.sidenav-toggled  .desktop-logo.logo-dark{
-		display:none;
-	}
 	.app.sidebar-mini.leftmenu-dark.sidenav-toggled.sidenav-toggled-open .desktop-logo.logo-dark {
 		display: block !important;
 	}
@@ -960,7 +957,7 @@ body.dark-theme.body-style1 {
 .leftmenu-dark {
   .app-sidebar {
     background: #081e3e;
-    border-left: 1px solid #081e3e  !important;
+    border-right: 1px solid #081e3e  !important;
     border-top: 1px solid #081e3e;
 
     ul li a {
@@ -1013,7 +1010,7 @@ body.dark-theme.body-style1 {
 }
 
 .dark-theme.leftmenu-dark .app-sidebar {
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   border-top: 1px solid$white-2;
 }
 
@@ -1080,7 +1077,7 @@ body.dark-theme.body-style1 {
 }
 .leftmenu-dark .main-sidebar-header {
     background: #081e3e;
-	border-left: 1px solid #081e3e !important;
+	border-right: 1px solid #081e3e !important;
     border-bottom: 1px solid rgba(234, 232, 241, 0.1);
 }
 .leftmenu-dark .app-sidebar__user .user-pro-body img {
@@ -1121,7 +1118,7 @@ body.dark-theme.body-style1 {
 .leftmenu-gradient {
   .app-sidebar {
     background:linear-gradient(to right bottom ,  #005bea  0%,#0db2de 100%) !important;
-    border-left: 1px solid #1d97e1;
+    border-right: 1px solid #1d97e1;
     border-top: 1px solid #1d97e1;
   }
 
@@ -1195,7 +1192,7 @@ body.dark-theme.body-style1 {
 
 .dark-theme.leftmenu-gradient .app-sidebar {
   background:linear-gradient(to right bottom, rgba(0, 91, 234, 0.95) 40%, rgba(10, 171, 214, 0.9) 100%)  ;
-  border-left: 1px solid$white-2;
+  border-right: 1px solid$white-2;
   border-top: 1px solid $black-5;
 }
 
@@ -1271,7 +1268,7 @@ body.dark-theme.body-style1 {
 .leftmenu-gradient .main-sidebar-header {
     background: linear-gradient(to right ,rgb(25, 107, 236)  40%,  rgb(27, 125, 232)100%) !important;
     border-bottom: 1px solid rgba(234, 232, 241, 0.2);
-	border-left: 1px solid #1c94e1;
+	border-right: 1px solid #1c94e1;
 }
 .leftmenu-gradient .app-sidebar__user .user-info .text-muted {
     color: $white-6 !important;
@@ -1333,7 +1330,7 @@ body.dark-theme.body-style1 {
   .app-sidebar {
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.3);
     background: $white;
-    border-left: 1px solid $white;
+    border-right: 1px solid $white;
     border-top: 1px solid $white;
 
     ul li a {
@@ -1490,7 +1487,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out;
 
   &:before {
@@ -1528,7 +1525,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out;
 
   &:before {
@@ -1564,7 +1561,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out;
 
   &:before {
@@ -1599,7 +1596,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out;
 
   &:before {
@@ -1634,7 +1631,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid white;
+  border-right: 1px solid white;
   transition: all 0.3s ease-in-out;
 
   &:before {
@@ -1673,7 +1670,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #242e44;
+    border-right: 1px solid #242e44;
 	transition: all 0.3s ease-in-out;
 
     &:before {
@@ -1694,7 +1691,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #242e44 !important;
+    border-right: 1px solid #242e44 !important;
 	transition: all 0.3s ease-in-out;
 
     &:before {
@@ -1715,7 +1712,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #242e44 !important;
+    border-right: 1px solid #242e44 !important;
 	transition: all 0.3s ease-in-out; 
 
     &:before {
@@ -1736,7 +1733,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #242e44 !important;
+    border-right: 1px solid #242e44 !important;
 	transition: all 0.3s ease-in-out;
 
     &:before {
@@ -1757,7 +1754,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left:1px solid #242e44 !important;
+    border-right:1px solid #242e44 !important;
 	transition: all 0.3s ease-in-out;
 
     &:before {
@@ -1783,7 +1780,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid #1068e3;
+      border-right: 1px solid #1068e3;
 	  transition: all 0.3s ease-in-out;
 
       &:before {
@@ -1810,7 +1807,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid #1068e3;
+      border-right: 1px solid #1068e3;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -1837,7 +1834,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid #1068e3;
+      border-right: 1px solid #1068e3;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -1864,7 +1861,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid #1068e3;
+      border-right: 1px solid #1068e3;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -1891,7 +1888,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid #1068e3;
+      border-right: 1px solid #1068e3;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -1918,7 +1915,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 
       &:before {
         content: '';
@@ -1943,7 +1940,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 
       &:before {
         content: '';
@@ -1968,7 +1965,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 
       &:before {
         content: '';
@@ -1993,7 +1990,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 
       &:before {
         content: '';
@@ -2022,7 +2019,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -2049,7 +2046,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -2076,7 +2073,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 	  transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -2103,7 +2100,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 	 transition: all 0.3s ease-in-out; 
 
       &:before {
@@ -2132,7 +2129,7 @@ body.dark-theme.body-style1 {
       background-size: cover;
       height: 100vh;
       width: 240px;
-      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
 	  webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2166,7 +2163,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #0eafdf;
+    border-right: 1px solid #0eafdf;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2191,7 +2188,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #0eafdf;
+    border-right: 1px solid #0eafdf;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2216,7 +2213,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #0eafdf;
+    border-right: 1px solid #0eafdf;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2241,7 +2238,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #0eafdf;
+    border-right: 1px solid #0eafdf;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2266,7 +2263,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid #0eafdf;
+    border-right: 1px solid #0eafdf;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2297,7 +2294,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2347,7 +2344,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2372,7 +2369,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2397,7 +2394,7 @@ body.dark-theme.body-style1 {
     background-size: cover;
     height: 100vh;
     width: 240px;
-    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 	webkit-transition: all 0.3s ease-in-out;
 		-o-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
@@ -2853,7 +2850,7 @@ body.dark-theme.body-style1 {
 		height: 31px;
 		background: #00c8ff !important;
 		position: absolute;
-		right: 0;
+		left: 0;
 	}
     .side-menu__item {
       &.active, &:hover, &:focus {
@@ -3112,27 +3109,27 @@ body.dark-theme.body-style1 {
 .leftmenu-color {
   &.leftbgimage4 .main-sidebar-header {
     background:#0c64de;
-	border-left: 1px solid #1767e7;
+	border-right: 1px solid #1767e7;
   }
 
   &.leftbgimage1 .main-sidebar-header {
     background: #0f68e3;
-	border-left: 1px solid #1767e7;
+	border-right: 1px solid #1767e7;
   }
 
   &.leftbgimage2 .main-sidebar-header {
     background: rgb(13, 104, 227);
-	border-left: 1px solid #1767e7;
+	border-right: 1px solid #1767e7;
   }
 
   &.leftbgimage3 .main-sidebar-header {
     background: #1971ea;
-	border-left: 1px solid #1767e7;
+	border-right: 1px solid #1767e7;
   }
 
   &.leftbgimage5 .main-sidebar-header {
     background: #1767e7;
-	border-left: 1px solid #1767e7;
+	border-right: 1px solid #1767e7;
   }
   .app-sidebar .side-item.side-item-category {
     color: rgba(255, 255, 255, 0.88);
@@ -3584,7 +3581,7 @@ body.dark-theme.body-style1 {
 
   &.body-style1 {
     .main-sidebar-header {
-      border-left: 1px solid rgba(222, 228, 236, 0.1);
+      border-right: 1px solid rgba(222, 228, 236, 0.1);
     }
 
     .main-header {
@@ -3596,7 +3593,7 @@ body.dark-theme.body-style1 {
 
 .light-theme.body-style1 {
   .main-sidebar-header {
-    border-left: 1px solid #e8ebf1;
+    border-right: 1px solid #e8ebf1;
   }
 
   .main-header {
@@ -3842,7 +3839,7 @@ body.dark-theme.body-style1 {
     height: 31px;
     background: #01c5ff;
     position: absolute;
-    right: 0;
+    left: 0;
 }
 .horizontal-dark .hor-menu .horizontalMenu > .horizontalMenu-list > li > a.active .side-menu__icon {
     fill: #fff;
@@ -3902,12 +3899,12 @@ body.dark-theme.body-style1 {
 
   .second-sidemenu {
     background: #0162e8;
-    border-left: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
   }
 
   .first-sidemenu li.active, .resp-vtabs .resp-tab-active:hover {
     background: #0162e8;
-    border-left: 0 !important;
+    border-right: 0 !important;
   }
 
   .app-sidebar.toggle-sidemenu .first-sidemenu li.active:before {
@@ -3922,7 +3919,7 @@ body.dark-theme.body-style1 {
 
   .resp-vtabs .resp-tabs-list li {
     border: 1px solid rgba(255, 255, 255, 0.04) !important;
-    border-right: 0 !important;
+    border-left: 0 !important;
     border-top: 0 !important;
     border-bottom: 0;
   }
@@ -3943,12 +3940,12 @@ body.dark-theme.body-style1 {
   }
 
   &.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-    border-left: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.04) !important;
   }
 
   .resp-vtabs .first-sidemenu {
     .resp-tabs-list li.active, .resp-tab-active li:hover {
-      border-left: 0 !important;
+      border-right: 0 !important;
     }
   }
 }
@@ -3962,29 +3959,29 @@ body.dark-theme.body-style1 {
 
   .second-sidemenu {
     background: #081e3e;
-    border-left: 1px solid rgba(234, 232, 241, 0.07) !important;
+    border-right: 1px solid rgba(234, 232, 241, 0.07) !important;
   }
 
   .first-sidemenu li.active {
     background: #081e3e;
-    border-left: 0 !important;
+    border-right: 0 !important;
   }
 
   .resp-vtabs {
     .resp-tab-active:hover {
       background: #081e3e;
-      border-left: 0 !important;
+      border-right: 0 !important;
     }
 
     .first-sidemenu {
       .resp-tabs-list li.active, .resp-tab-active li:hover {
-        border-left: 0 !important;
+        border-right: 0 !important;
       }
     }
 
     .resp-tabs-list li {
       border: 1px solid rgba(234, 232, 241, 0.07) !important;
-      border-right: 0 !important;
+      border-left: 0 !important;
       border-top: 0 !important;
       border-bottom: 0;
     }
@@ -4019,7 +4016,7 @@ body.dark-theme.body-style1 {
   }
 
   &.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-    border-left: 1px solid rgba(234, 232, 241, 0.07) !important;
+    border-right: 1px solid rgba(234, 232, 241, 0.07) !important;
   }
 }
 
@@ -4032,12 +4029,12 @@ body.dark-theme.body-style1 {
 
   .second-sidemenu {
     background: linear-gradient(to top, #005bea 0%, #0db2de 100%) !important;
-    border-left: 1px solid #1d97e1 !important;
+    border-right: 1px solid #1d97e1 !important;
   }
 
   .first-sidemenu li.active, .resp-vtabs .resp-tab-active:hover {
     background: rgba(0, 0, 0, 0.05);
-    border-left: 0 !important;
+    border-right: 0 !important;
   }
 
   .app-sidebar.toggle-sidemenu .first-sidemenu li.active:before {
@@ -4052,7 +4049,7 @@ body.dark-theme.body-style1 {
 
   .resp-vtabs .resp-tabs-list li {
     border: 1px solid rgba(234, 232, 241, 0.07) !important;
-    border-right: 0 !important;
+    border-left: 0 !important;
     border-top: 0 !important;
     border-bottom: 0;
   }
@@ -4073,12 +4070,12 @@ body.dark-theme.body-style1 {
   }
 
   &.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-    border-left: 1px solid rgba(234, 232, 241, 0.2) !important;
+    border-right: 1px solid rgba(234, 232, 241, 0.2) !important;
   }
 
   .resp-vtabs .first-sidemenu {
     .resp-tabs-list li.active, .resp-tab-active li:hover {
-      border-left: 0 !important;
+      border-right: 0 !important;
     }
   }
 }
@@ -4091,18 +4088,18 @@ body.dark-theme.body-style1 {
 
   .first-sidemenu li.active {
     background: #fff;
-    border-left: 0 !important;
+    border-right: 0 !important;
   }
 
   .resp-vtabs {
     .resp-tab-active:hover {
       background: #fff;
-      border-left: 0 !important;
+      border-right: 0 !important;
     }
 
     .resp-tabs-list li {
       border: 1px solid #eae8f1 !important;
-      border-right: 0 !important;
+      border-left: 0 !important;
       border-top: 0 !important;
       border-bottom: 0;
     }
@@ -4143,16 +4140,16 @@ body.dark-theme.body-style1 {
   }
 
   &.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-    border-left: 1px solid #eae8f1 !important;
+    border-right: 1px solid #eae8f1 !important;
   }
 
   .resp-vtabs .first-sidemenu {
     .resp-tabs-list li.active, .resp-tab-active li:hover {
-      border-left: 0 !important;
+      border-right: 0 !important;
     }
   }
 
   .app-sidebar.toggle-sidemenu {
-    border-left: 0;
+    border-right: 0;
   }
 }

@@ -3,17 +3,17 @@
 @charset "UTF-8";
 
 .app-sidebar .mCSB_draggerContainer {
-  left: -11px !important;
+  right: -11px !important;
 }
 
 @media (min-width: 768px) {
   .app.sidenav-toggled {
     .app-content {
-        margin-right: 80px;
+        margin-left: 80px;
     }
 
     .app-sidebar {
-      right: 0;
+      left: 0;
 		width: 80px;
 		overflow: hidden;
     }
@@ -44,7 +44,7 @@
     overflow-x: hidden;
 
     .app-sidebar {
-      right: -240px;
+      left: -240px;
     }
 
     .app-sidebar__overlay {
@@ -53,11 +53,11 @@
 
     &.sidenav-toggled {
       .app-content {
-        margin-right: 0;
+        margin-left: 0;
       }
 
       .app-sidebar {
-        right: 0;
+        left: 0;
       }
 
       .app-sidebar__overlay {
@@ -66,7 +66,7 @@
     }
 
     &.sidebar-gone.sidenav-toggled .app-sidebar {
-      right: 0;
+      left: 0;
     }
   }
   .app.sidenav-toggled .side-menu .side-menu__icon {
@@ -101,7 +101,7 @@
 
 @media (min-width: 768px) {
   .app-content {
-    margin-right: 240px;
+    margin-left: 240px;
   }
   .app.sidenav-toggled .avatar-xl {
     width: 55px !important;
@@ -422,7 +422,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   color: #14112d;
   width: 240px;
   max-height: 100%;
@@ -434,6 +434,7 @@
   -webkit-transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 transition: width 0.3s cubic-bezier(0, 0, 0.2, 1);
 transform: translate3d(0, 0, 0);
+
   &::-webkit-scrollbar {
     width: 6px;
   }
@@ -587,7 +588,7 @@ slide is-expanded side-menu__item {
 
 @media (min-width: 768px) {
 	.app.sidebar-mini.sidenav-toggled  .profile-status {
-	    left: 22px;
+	    right: 22px;
 		width: 11px;
 		height: 11px;
 	    top: 57px;
@@ -677,7 +678,7 @@ slide is-expanded side-menu__item {
 .side-menu .side-menu__icon {
       font-size: 23px;
     line-height: 0;
-    margin-left: 14px;
+    margin-right: 14px;
     width: 22px;
     height: 22px;
     line-height: 34px;
@@ -718,7 +719,7 @@ slide is-expanded side-menu__item {
     height: 31px;
     background: #005ee9;
     position: absolute;
-    right: 0;
+    left: 0;
 }
 .app-sidebar .side-item.side-item-category {
     color: #2c364c;
@@ -763,7 +764,7 @@ slide is-expanded side-menu__item {
 	align-items: center;
 	font-size: 13px;
 	height: 32px;
-	padding: 0 56px 0 0;
+	padding: 0 0 0 56px;
 	font-weight: 400;
 	margin: 4px 0;
 
@@ -835,7 +836,7 @@ slide is-expanded side-menu__item {
     }
 
     .app-sidebar {
-      right: 0;
+      left: 0;
 
       &:hover {
         overflow: visible;
@@ -1349,11 +1350,11 @@ slide is-expanded side-menu__item {
 }
 
 .app-sidebar .slide-menu a:before {
-	content: "\e92e";
+	content: "\e92f";
 	font-family: 'feather' !important;
 	position: absolute;
 	top: 9px;
-	right: 27px;
+	left: 27px;
 	font-size: 9px;
 	color: #6d7790;
 }
@@ -1383,7 +1384,7 @@ slide is-expanded side-menu__item {
 }
 
 .sidenav-toggled .app-content {
-  transition: margin-right 0.3s ease;
+  transition: margin-left 0.3s ease;
 }
 
 .sub-slide-menu .active .sub-slide-item.active {
@@ -1407,7 +1408,7 @@ slide is-expanded side-menu__item {
 
 @media (min-width: 768px){
 	.app.sidebar-mini.sidenav-toggled-open .app-sidebar {
-		right: 0;
+		left: 0;
 		width: 240px;
 	}
 	.app.sidebar-mini.sidenav-toggled-open .side-menu__item {
@@ -1423,9 +1424,9 @@ slide is-expanded side-menu__item {
 		transition: max-height 0.3s ease;
 	}
 	.app.sidebar-mini.sidenav-toggled-open .side-menu .slide .side-menu__item {
-		padding: 0 22px 0 20px;
+		padding: 0 20px 0 22px;
 		margin: 0;
-		text-align:right;
+		text-align:left;
 		border-radius: 0;
 	}
 	.app.sidebar-mini.sidenav-toggled-open .slide-menu {
@@ -1467,7 +1468,7 @@ slide is-expanded side-menu__item {
 		text-align: center;
 	}
 	.app.sidebar-mini.sidenav-toggled-open .side-menu .side-menu__icon{
-	    margin-left: 12px;
+	    margin-right: 12px;
 	}
 	.app.sidebar-mini.sidenav-toggled-open .ps > .ps__rail-y > .ps__thumb-y {
 		left: 1px;
@@ -1483,7 +1484,7 @@ slide is-expanded side-menu__item {
 		display: block !important;
 	}
 	.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .profile-status {
-		left: 97px;
+		right: 97px;
 		width: 11px;
 		height: 11px;
 		top: 70px;

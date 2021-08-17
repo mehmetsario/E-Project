@@ -266,7 +266,7 @@ body.body-style1 {
 
 .body-style1 .app-sidebar {
   box-shadow: none;
-  border-left: 1px solid #e0e6f5 !important; }
+  border-right: 1px solid #e0e6f5 !important; }
 
 body.light-theme.body-style1 {
   background: #fff; }
@@ -369,7 +369,7 @@ body.dark-theme.body-style1 {
 
 .dark-theme.body-style1 .app-sidebar {
   border-top: 1px solid transparent;
-  border-left: 1px solid rgba(224, 230, 245, 0.1) !important;
+  border-right: 1px solid rgba(224, 230, 245, 0.1) !important;
   box-shadow: none; }
 
 .dark-theme.body-style1 .app-header {
@@ -377,7 +377,7 @@ body.dark-theme.body-style1 {
   box-shadow: none; }
 
 .light-theme.body-style1 .app-sidebar {
-  border-left: 1px solid #e8ebf1;
+  border-right: 1px solid #e8ebf1;
   border-top: 1px solid transparent;
   box-shadow: none; }
 
@@ -391,13 +391,13 @@ body.dark-theme.body-style1 {
 /* =========== Leftmenu-color CSS ============= */
 .leftmenu-color .app-sidebar {
   background: #0162e8;
-  border-left: 1px solid #0162e8;
+  border-right: 1px solid #0162e8;
   border-top: 1px solid #0162e8; }
 
 .leftmenu-color .main-sidebar-header {
   background: #0162e8;
   border-bottom: 1px solid rgba(234, 232, 241, 0.1);
-  border-left: 1px solid #1666e6; }
+  border-right: 1px solid #1666e6; }
 
 .leftmenu-color .slide.is-expanded {
   background: 0; }
@@ -450,7 +450,7 @@ body.dark-theme.body-style1 {
 
 .dark-theme.leftmenu-color .app-sidebar {
   background: #0162e8;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
 
 .leftmenu-color .slide.is-expanded .side-menu__item {
@@ -590,8 +590,6 @@ body.dark-theme.body-style1 {
     display: none; }
   .leftmenu-dark.app.sidebar-mini.sidenav-toggled.sidenav-toggled-open .mobile-logo.icon-dark {
     display: none !important; }
-  .leftmenu-color.app.sidebar-mini.sidenav-toggled .desktop-logo.logo-dark {
-    display: none; }
   .app.sidebar-mini.leftmenu-dark.sidenav-toggled.sidenav-toggled-open .desktop-logo.logo-dark {
     display: block !important; }
   .app.sidebar-mini.sidenav-toggled.sidenav-toggled-open.leftmenu-dark .desktop-logo {
@@ -607,7 +605,7 @@ body.dark-theme.body-style1 {
 /* =========== Leftmenu-Dark CSS ============= */
 .leftmenu-dark .app-sidebar {
   background: #081e3e;
-  border-left: 1px solid #081e3e  !important;
+  border-right: 1px solid #081e3e  !important;
   border-top: 1px solid #081e3e; }
   .leftmenu-dark .app-sidebar ul li a {
     color: rgba(255, 255, 255, 0.7); }
@@ -643,7 +641,7 @@ body.dark-theme.body-style1 {
   color: #b1b3bb; }
 
 .dark-theme.leftmenu-dark .app-sidebar {
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   border-top: 1px solid rgba(255, 255, 255, 0.2); }
 
 .leftmenu-dark .slide.is-expanded .side-menu__item {
@@ -687,7 +685,7 @@ body.dark-theme.body-style1 {
 
 .leftmenu-dark .main-sidebar-header {
   background: #081e3e;
-  border-left: 1px solid #081e3e !important;
+  border-right: 1px solid #081e3e !important;
   border-bottom: 1px solid rgba(234, 232, 241, 0.1); }
 
 .leftmenu-dark .app-sidebar__user .user-pro-body img {
@@ -717,7 +715,7 @@ body.dark-theme.body-style1 {
 /* =========== Leftmenu-Gradient CSS ============= */
 .leftmenu-gradient .app-sidebar {
   background: linear-gradient(to right bottom, #005bea 0%, #0db2de 100%) !important;
-  border-left: 1px solid #1d97e1;
+  border-right: 1px solid #1d97e1;
   border-top: 1px solid #1d97e1; }
 
 .leftmenu-gradient .slide.is-expanded {
@@ -770,7 +768,7 @@ body.dark-theme.body-style1 {
 
 .dark-theme.leftmenu-gradient .app-sidebar {
   background: linear-gradient(to right bottom, rgba(0, 91, 234, 0.95) 40%, rgba(10, 171, 214, 0.9) 100%);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.5); }
 
 .leftmenu-gradient .slide.is-expanded .side-menu__item {
@@ -820,7 +818,7 @@ body.dark-theme.body-style1 {
 .leftmenu-gradient .main-sidebar-header {
   background: linear-gradient(to right, #196bec 40%, #1b7de8 100%) !important;
   border-bottom: 1px solid rgba(234, 232, 241, 0.2);
-  border-left: 1px solid #1c94e1; }
+  border-right: 1px solid #1c94e1; }
 
 .leftmenu-gradient .app-sidebar__user .user-info .text-muted {
   color: rgba(255, 255, 255, 0.6) !important; }
@@ -866,7 +864,7 @@ body.dark-theme.body-style1 {
 .leftmenu-light .app-sidebar {
   box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.3);
   background: #fff;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   border-top: 1px solid #fff; }
   .leftmenu-light .app-sidebar ul li a {
     color: #000; }
@@ -978,7 +976,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out; }
   .leftbgimage1 .app-sidebar:before {
     content: '';
@@ -1008,7 +1006,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out; }
   .leftbgimage2 .app-sidebar:before {
     content: '';
@@ -1037,7 +1035,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out; }
   .leftbgimage3 .app-sidebar:before {
     content: '';
@@ -1065,7 +1063,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   transition: all 0.3s ease-in-out; }
   .leftbgimage4 .app-sidebar:before {
     content: '';
@@ -1093,7 +1091,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid white;
+  border-right: 1px solid white;
   transition: all 0.3s ease-in-out; }
   .leftbgimage5 .app-sidebar:before {
     content: '';
@@ -1122,7 +1120,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #242e44;
+  border-right: 1px solid #242e44;
   transition: all 0.3s ease-in-out; }
   .dark-theme.leftbgimage1 .app-sidebar:before {
     content: '';
@@ -1140,7 +1138,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #242e44 !important;
+  border-right: 1px solid #242e44 !important;
   transition: all 0.3s ease-in-out; }
   .dark-theme.leftbgimage2 .app-sidebar:before {
     content: '';
@@ -1158,7 +1156,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #242e44 !important;
+  border-right: 1px solid #242e44 !important;
   transition: all 0.3s ease-in-out; }
   .dark-theme.leftbgimage3 .app-sidebar:before {
     content: '';
@@ -1176,7 +1174,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #242e44 !important;
+  border-right: 1px solid #242e44 !important;
   transition: all 0.3s ease-in-out; }
   .dark-theme.leftbgimage4 .app-sidebar:before {
     content: '';
@@ -1194,7 +1192,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #242e44 !important;
+  border-right: 1px solid #242e44 !important;
   transition: all 0.3s ease-in-out; }
   .dark-theme.leftbgimage5 .app-sidebar:before {
     content: '';
@@ -1213,7 +1211,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #1068e3;
+  border-right: 1px solid #1068e3;
   transition: all 0.3s ease-in-out; }
   .leftmenu-color.leftbgimage1 .app-sidebar:before {
     content: '';
@@ -1234,7 +1232,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #1068e3;
+  border-right: 1px solid #1068e3;
   transition: all 0.3s ease-in-out; }
   .leftmenu-color.leftbgimage2 .app-sidebar:before {
     content: '';
@@ -1255,7 +1253,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #1068e3;
+  border-right: 1px solid #1068e3;
   transition: all 0.3s ease-in-out; }
   .leftmenu-color.leftbgimage3 .app-sidebar:before {
     content: '';
@@ -1276,7 +1274,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #1068e3;
+  border-right: 1px solid #1068e3;
   transition: all 0.3s ease-in-out; }
   .leftmenu-color.leftbgimage4 .app-sidebar:before {
     content: '';
@@ -1297,7 +1295,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #1068e3;
+  border-right: 1px solid #1068e3;
   transition: all 0.3s ease-in-out; }
   .leftmenu-color.leftbgimage5 .app-sidebar:before {
     content: '';
@@ -1318,7 +1316,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent; }
+  border-right: 1px solid transparent; }
   .leftmenu-color.leftbgimage6 .app-sidebar:before {
     content: '';
     position: fixed;
@@ -1337,7 +1335,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent; }
+  border-right: 1px solid transparent; }
   .leftmenu-color.leftbgimage7 .app-sidebar:before {
     content: '';
     position: fixed;
@@ -1356,7 +1354,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent; }
+  border-right: 1px solid transparent; }
   .leftmenu-color.leftbgimage8 .app-sidebar:before {
     content: '';
     position: fixed;
@@ -1375,7 +1373,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent; }
+  border-right: 1px solid transparent; }
   .leftmenu-color.leftbgimage9 .app-sidebar:before {
     content: '';
     position: fixed;
@@ -1395,7 +1393,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   transition: all 0.3s ease-in-out; }
   .leftmenu-dark.leftbgimage1 .app-sidebar:before {
     content: '';
@@ -1416,7 +1414,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   transition: all 0.3s ease-in-out; }
   .leftmenu-dark.leftbgimage2 .app-sidebar:before {
     content: '';
@@ -1437,7 +1435,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   transition: all 0.3s ease-in-out; }
   .leftmenu-dark.leftbgimage3 .app-sidebar:before {
     content: '';
@@ -1458,7 +1456,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   transition: all 0.3s ease-in-out; }
   .leftmenu-dark.leftbgimage4 .app-sidebar:before {
     content: '';
@@ -1481,7 +1479,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1507,7 +1505,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #0eafdf;
+  border-right: 1px solid #0eafdf;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1529,7 +1527,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #0eafdf;
+  border-right: 1px solid #0eafdf;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1551,7 +1549,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #0eafdf;
+  border-right: 1px solid #0eafdf;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1573,7 +1571,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #0eafdf;
+  border-right: 1px solid #0eafdf;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1595,7 +1593,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid #0eafdf;
+  border-right: 1px solid #0eafdf;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1618,7 +1616,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1662,7 +1660,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1684,7 +1682,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1706,7 +1704,7 @@ body.dark-theme.body-style1 {
   background-size: cover;
   height: 100vh;
   width: 240px;
-  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
@@ -1994,7 +1992,7 @@ body.dark-theme.body-style1 {
   height: 31px;
   background: #00c8ff !important;
   position: absolute;
-  right: 0; }
+  left: 0; }
 
 .dark-theme.leftbgimage4 .side-menu__item.active, .dark-theme.leftbgimage4 .side-menu__item:hover, .dark-theme.leftbgimage4 .side-menu__item:focus {
   background: transparent !important;
@@ -2154,23 +2152,23 @@ body.dark-theme.body-style1 {
 
 .leftmenu-color.leftbgimage4 .main-sidebar-header {
   background: #0c64de;
-  border-left: 1px solid #1767e7; }
+  border-right: 1px solid #1767e7; }
 
 .leftmenu-color.leftbgimage1 .main-sidebar-header {
   background: #0f68e3;
-  border-left: 1px solid #1767e7; }
+  border-right: 1px solid #1767e7; }
 
 .leftmenu-color.leftbgimage2 .main-sidebar-header {
   background: #0d68e3;
-  border-left: 1px solid #1767e7; }
+  border-right: 1px solid #1767e7; }
 
 .leftmenu-color.leftbgimage3 .main-sidebar-header {
   background: #1971ea;
-  border-left: 1px solid #1767e7; }
+  border-right: 1px solid #1767e7; }
 
 .leftmenu-color.leftbgimage5 .main-sidebar-header {
   background: #1767e7;
-  border-left: 1px solid #1767e7; }
+  border-right: 1px solid #1767e7; }
 
 .leftmenu-color .app-sidebar .side-item.side-item-category {
   color: rgba(255, 255, 255, 0.88); }
@@ -2457,14 +2455,14 @@ body.dark-theme.body-style1 {
   background: #1666e5; }
 
 .dark-theme.body-style1 .main-sidebar-header {
-  border-left: 1px solid rgba(222, 228, 236, 0.1); }
+  border-right: 1px solid rgba(222, 228, 236, 0.1); }
 
 .dark-theme.body-style1 .main-header {
   height: 65px;
   border-bottom: 1px solid rgba(222, 228, 236, 0.1) !important; }
 
 .light-theme.body-style1 .main-sidebar-header {
-  border-left: 1px solid #e8ebf1; }
+  border-right: 1px solid #e8ebf1; }
 
 .light-theme.body-style1 .main-header {
   height: 65px; }
@@ -2660,7 +2658,7 @@ body.dark-theme.body-style1 {
   height: 31px;
   background: #01c5ff;
   position: absolute;
-  right: 0; }
+  left: 0; }
 
 .horizontal-dark .hor-menu .horizontalMenu > .horizontalMenu-list > li > a.active .side-menu__icon {
   fill: #fff; }
@@ -2702,11 +2700,11 @@ body.dark-theme.body-style1 {
 
 .leftmenu-color .second-sidemenu {
   background: #0162e8;
-  border-left: 1px solid rgba(255, 255, 255, 0.04) !important; }
+  border-right: 1px solid rgba(255, 255, 255, 0.04) !important; }
 
 .leftmenu-color .first-sidemenu li.active, .leftmenu-color .resp-vtabs .resp-tab-active:hover {
   background: #0162e8;
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .leftmenu-color .app-sidebar.toggle-sidemenu .first-sidemenu li.active:before {
   background: #08daf5; }
@@ -2716,7 +2714,7 @@ body.dark-theme.body-style1 {
 
 .leftmenu-color .resp-vtabs .resp-tabs-list li {
   border: 1px solid rgba(255, 255, 255, 0.04) !important;
-  border-right: 0 !important;
+  border-left: 0 !important;
   border-top: 0 !important;
   border-bottom: 0; }
 
@@ -2731,10 +2729,10 @@ body.dark-theme.body-style1 {
   color: rgba(255, 255, 255, 0.88); }
 
 .leftmenu-color.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-  border-left: 1px solid rgba(255, 255, 255, 0.04) !important; }
+  border-right: 1px solid rgba(255, 255, 255, 0.04) !important; }
 
 .leftmenu-color .resp-vtabs .first-sidemenu .resp-tabs-list li.active, .leftmenu-color .resp-vtabs .first-sidemenu .resp-tab-active li:hover {
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 /*Toggle-menu Dark-css  */
 .leftmenu-dark .first-sidemenu {
@@ -2742,22 +2740,22 @@ body.dark-theme.body-style1 {
 
 .leftmenu-dark .second-sidemenu {
   background: #081e3e;
-  border-left: 1px solid rgba(234, 232, 241, 0.07) !important; }
+  border-right: 1px solid rgba(234, 232, 241, 0.07) !important; }
 
 .leftmenu-dark .first-sidemenu li.active {
   background: #081e3e;
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .leftmenu-dark .resp-vtabs .resp-tab-active:hover {
   background: #081e3e;
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .leftmenu-dark .resp-vtabs .first-sidemenu .resp-tabs-list li.active, .leftmenu-dark .resp-vtabs .first-sidemenu .resp-tab-active li:hover {
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .leftmenu-dark .resp-vtabs .resp-tabs-list li {
   border: 1px solid rgba(234, 232, 241, 0.07) !important;
-  border-right: 0 !important;
+  border-left: 0 !important;
   border-top: 0 !important;
   border-bottom: 0; }
 
@@ -2779,7 +2777,7 @@ body.dark-theme.body-style1 {
   color: rgba(255, 255, 255, 0.88); }
 
 .leftmenu-dark.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-  border-left: 1px solid rgba(234, 232, 241, 0.07) !important; }
+  border-right: 1px solid rgba(234, 232, 241, 0.07) !important; }
 
 /*Toggle-menu Gradient-Color-css  */
 .leftmenu-gradient .first-sidemenu {
@@ -2787,11 +2785,11 @@ body.dark-theme.body-style1 {
 
 .leftmenu-gradient .second-sidemenu {
   background: linear-gradient(to top, #005bea 0%, #0db2de 100%) !important;
-  border-left: 1px solid #1d97e1 !important; }
+  border-right: 1px solid #1d97e1 !important; }
 
 .leftmenu-gradient .first-sidemenu li.active, .leftmenu-gradient .resp-vtabs .resp-tab-active:hover {
   background: rgba(0, 0, 0, 0.05);
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .leftmenu-gradient .app-sidebar.toggle-sidemenu .first-sidemenu li.active:before {
   background: #08daf5; }
@@ -2801,7 +2799,7 @@ body.dark-theme.body-style1 {
 
 .leftmenu-gradient .resp-vtabs .resp-tabs-list li {
   border: 1px solid rgba(234, 232, 241, 0.07) !important;
-  border-right: 0 !important;
+  border-left: 0 !important;
   border-top: 0 !important;
   border-bottom: 0; }
 
@@ -2816,10 +2814,10 @@ body.dark-theme.body-style1 {
   color: rgba(255, 255, 255, 0.88); }
 
 .leftmenu-gradient.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-  border-left: 1px solid rgba(234, 232, 241, 0.2) !important; }
+  border-right: 1px solid rgba(234, 232, 241, 0.2) !important; }
 
 .leftmenu-gradient .resp-vtabs .first-sidemenu .resp-tabs-list li.active, .leftmenu-gradient .resp-vtabs .first-sidemenu .resp-tab-active li:hover {
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 /*Toggle-menu light-Color-css  */
 .dark-theme.leftmenu-light .first-sidemenu, .dark-theme.leftmenu-light .second-sidemenu {
@@ -2827,15 +2825,15 @@ body.dark-theme.body-style1 {
 
 .dark-theme.leftmenu-light .first-sidemenu li.active {
   background: #fff;
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .dark-theme.leftmenu-light .resp-vtabs .resp-tab-active:hover {
   background: #fff;
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .dark-theme.leftmenu-light .resp-vtabs .resp-tabs-list li {
   border: 1px solid #eae8f1 !important;
-  border-right: 0 !important;
+  border-left: 0 !important;
   border-top: 0 !important;
   border-bottom: 0; }
 
@@ -2863,12 +2861,12 @@ body.dark-theme.body-style1 {
   background: #fff; }
 
 .dark-theme.leftmenu-light.app.sidebar-mini.sidenav-toggled .first-sidemenu li.active {
-  border-left: 1px solid #eae8f1 !important; }
+  border-right: 1px solid #eae8f1 !important; }
 
 .dark-theme.leftmenu-light .resp-vtabs .first-sidemenu .resp-tabs-list li.active, .dark-theme.leftmenu-light .resp-vtabs .first-sidemenu .resp-tab-active li:hover {
-  border-left: 0 !important; }
+  border-right: 0 !important; }
 
 .dark-theme.leftmenu-light .app-sidebar.toggle-sidemenu {
-  border-left: 0; }
+  border-right: 0; }
 
 /*# sourceMappingURL=skin-modes.css.map */
