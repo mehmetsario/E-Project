@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 
 class ProductController extends Controller
@@ -40,7 +42,27 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'details'=>'required',
+            'price'=>'required|numeric',
+            'category_id'=>'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
+
+        ]);
+        $input = $request->all();
+        if ($image = $request->file('image')) {
+            $destinationPath = 'assets/site/images/product/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+
+        Product::create($input);
+        return Redirect::back()->with('success','Product was Added');
     }
 
     /**
@@ -72,9 +94,37 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'details'=>'required',
+            'price'=>'required|numeric',
+            'category_id'=>'required',
+
+
+        ]);
+
+        $data=Product::findorfail($id);
+        $data->name=$request->name;
+        $data->description=$request->description;
+        $data->details=$request->details;
+        $data->price=$request->price;
+        $data->category_id=$request->category_id;
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'assets/site/images/product/';
+            if(File::exists(public_path($destinationPath.$data['image']))){
+                File::delete($destinationPath.$data['image']);
+            }
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $data['image'] = "$profileImage";
+        }
+        $data->save();
+        return Redirect::back();
+
     }
 
     /**
@@ -83,9 +133,12 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $data=Product::findorfail($id);
+        $data->delete();
+        return Redirect::back();
+
     }
     function addToCart(Product $productId){
         if(session()->has('cart')){
@@ -134,8 +187,11 @@ class ProductController extends Controller
     }
     public function viewProduct(){
         $data=Product::all();
-
-        return view('admin.UpdateProduct',['item'=>$data]);
+        $data2=Category::all();
+        return view('admin.UpdateProduct',['item'=>$data,'categories'=>$data2]);
     }
-
+    public function passCategory(){
+        $data=Category::all();
+        return view('admin.AddProduct',['item'=>$data]);
+    }
 }

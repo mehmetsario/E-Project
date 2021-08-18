@@ -17,6 +17,9 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li>
+                                       <a href="/admin">DashBoard</a>
+                            </li>
                             <!-- Setting Area End Here -->
                             <!-- Begin Currency Area -->
                             <li>
@@ -100,7 +103,8 @@
                                 @foreach(session()->get('cart')->items as $cart)
                                     <li>
                                         <a href="single-product.html" class="minicart-product-image">
-                                            <img src="{{$cart['image_small']}}"
+
+                                            <img src="{{'assets/site/images/product/'.$cart['image']}}"
                                                  alt="cart products">
                                         </a>
                                         <div class="minicart-product-details">

@@ -36,7 +36,7 @@
                                             </button>
                                         </form>
                                     </td>
-                                    <td class="li-product-thumbnail"><a href="#"><img src="{{$cart['image_small']}}" alt="Li's Product Image"></a></td>
+                                    <td class="li-product-thumbnail"><a href="#"><img src="{{'assets/site/images/product/'.$cart['image']}}" alt="Li's Product Image" width="150" height="150"></a></td>
                                     <td class="li-product-name"><a href="#">{{$cart['name']}}</a></td>
                                     <td class="li-product-price"><span class="amount">{{$cart['price']}}</span></td>
                                     <td class="quantity">

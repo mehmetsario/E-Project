@@ -20,8 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('category_id');
             $table->string('description');
             $table->text('details');
-            $table->string('image_large');
-            $table->string('image_small');
+            $table->string('image');
             $table->timestamps();
         });
     }

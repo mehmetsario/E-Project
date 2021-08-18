@@ -44,7 +44,7 @@
                                             <div class="single-product-wrap">
                                                 <div class="product-image">
                                                     <a href="single-product.html">
-                                                        <img src="{{$item->image_large}}" alt="Li's Product Image">
+                                                        <img src="{{'assets/site/images/product/'.$item->image}}" alt="Li's Product Image">
                                                     </a>
                                                     <span class="sticker">New</span>
                                                 </div>
@@ -93,7 +93,7 @@
                                             <div class="col-lg-3 col-md-5 ">
                                                 <div class="product-image">
                                                     <a href="single-product.html">
-                                                        <img src="{{$item->image_large}}" alt="Li's Product Image">
+                                                        <img src="{{'assets/site/images/product/'.$item->image}}" alt="Li's Product Image">
                                                     </a>
                                                     <span class="sticker">New</span>
                                                 </div>

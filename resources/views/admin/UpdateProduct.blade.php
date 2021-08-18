@@ -35,7 +35,7 @@
                         <th>Description</th>
                         <th>category</th>
 
-                        <th>image_small</th>
+                        <th>image</th>
                         <th width="280px">Action</th>
                     </tr>
                     @foreach ($item as $product)
@@ -46,12 +46,12 @@
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->category_id }}</td>
 
-                            <td><img src="{{ $product->image_small }}" width="100px"> </td>
+                            <td><img src="{{'assets/site/images/product/'. $product->image }}" width="100px"> </td>
 {{--                            <td><img src="/image/{{ $product->image }}" width="100px"></td>--}}
                             <td>
                                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">
-                                    
-                                    <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+
+                                    <a class="btn btn-primary" data-toggle="modal" data-target="#Modal{{$product->id}}" >Edit</a>
 
                                     @csrf
                                     @method('DELETE')
@@ -60,6 +60,108 @@
                                 </form>
                             </td>
                         </tr>
+                        <!-- Full screen modal -->
+                        <!-- Modal HTML Markup -->
+                        <div id="Modal{{$product->id}}" class="modal fade">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title">Login</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+                                                <div class="statbox widget box box-shadow">
+
+                                                    <div class="widget-content widget-content-area add-manage-product-2">
+                                                        <div class="row">
+                                                            <div class="col-xl-12 col-md-12">
+                                                                <div class="card card-default">
+                                                                    <div class="card-header"><h2 class="card-title"><span>Product</span></h2></div>
+                                                                    <div class="card-body">
+                                                                        <div class="card-body">
+                                                                            <form class="form-horizontal" method="POST" action="{{route('products.update',$product->id)}}" enctype="multipart/form-data">
+                                                                                @csrf
+                                                                                @method('PUT')
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-8">Name :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <input class="form-control" name="name" type="text" value="{{$product->name}}">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-4">Description :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <input type="text"  name="description" class="form-control" value="{{$product->description}}" ></input>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-4">Details :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <textarea rows="4" cols="5" name="details" class="form-control" >{{$product->details}}</textarea>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-4">Category :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <select class="form-control form-custom mb-4" name="category_id">
+                                                                                                <option value="">Select Category</option>
+                                                                                                @foreach($categories as $category)
+                                                                                                    <option value="{{$category->id}}"
+                                                                                                    @if ($category->id==$product->category_id)
+                                                                                                    selected
+                                                                                                    @endif
+                                                                                                    >{{$category->categoryName}}</option>
+                                                                                                @endforeach
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-4">Price :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <input class="form-control" name="price" type="text" value="{{$product->price}}">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="row">
+                                                                                    <label class="col-md-4"> Image :</label>
+                                                                                    <div class="col-md-8">
+                                                                                        <div class="mb-3">
+                                                                                            <div class="custom-file">
+                                                                                                <input type="file" class="form-control-file" id="file-input" name="image" value="{{'assets/site/images/product/'.$product->image}}">
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                                                                                    <button type="submit" class="btn btn-primary">Save changes</button>
+
+                                                                                </div>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.modal -->
+
                     @endforeach
                 </table>
 				<!-- row -->
