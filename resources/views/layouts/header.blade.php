@@ -107,12 +107,12 @@
                                         <li><a href="/admin">Dashboard</a></li>
                                         <li> <form  id="my_form" method="Post" action="{{route('logout')}}">
                                             @csrf
-                                            <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">LogOut</a>
+                                            <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">LogOut: {{Auth::user()->name}}</a>
                                         </form></li>
                                     @else
                                         <li><form  id="my_form" method="Post" action="{{route('logout')}}">
                                             @csrf
-                                          <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">LogOut</a>
+                                          <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">LogOut: {{Auth::user()->name}} </a>
                                         </form></li>
                                     @endif
 
