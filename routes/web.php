@@ -29,7 +29,7 @@ Route::get('/checkout', function () {
 });
 Route::get('/admin', function () {
     return view('admin.index');
-})->name('admin');
+})->name('admin')->middleware('admin');
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -52,3 +52,6 @@ Route::get('/UpdateProducts',[\App\Http\Controllers\ProductController::class,'vi
 
 Route::resource('categories',\App\Http\Controllers\CategoryController::class);
 Route::resource('products',\App\Http\Controllers\ProductController::class);
+
+\Illuminate\Support\Facades\Auth::routes();
+

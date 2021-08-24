@@ -107,7 +107,7 @@
                                     <div class="single-product-wrap">
                                         <div class="product-image">
                                             <a href="single-product.html">
-                                                <img src="{{asset('assets/site/images/product/'.$item->image)}}" alt="Li's Product Image" width="250px" height="250px">
+                                                <img src="{{asset('assets/site/images/product/'.$item->image)}}" alt="Li's Product Image" >
                                             </a>
                                             <span class="sticker">New</span>
                                         </div>
