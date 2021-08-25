@@ -32,9 +32,9 @@
                         <th>No</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Is Active</th>
                         <th>Description</th>
                         <th>category</th>
-
                         <th>image</th>
                         <th width="280px">Action</th>
                     </tr>
@@ -43,6 +43,7 @@
                             <td>{{ $product->id }}</td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->price }}</td>
+                            <td>{{ $product->isActive }}</td>
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->category_id }}</td>
 
@@ -85,7 +86,7 @@
                                                                                 @method('PUT')
                                                                                 <div class="form-group mb-4">
                                                                                     <div class="row">
-                                                                                        <label class="col-md-8">Name :</label>
+                                                                                        <label class="col-md-4">Name :</label>
                                                                                         <div class="col-md-8">
                                                                                             <input class="form-control" name="name" type="text" value="{{$product->name}}">
                                                                                         </div>
@@ -133,6 +134,25 @@
                                                                                     </div>
                                                                                 </div>
 
+                                                                                <div class="form-group mb-4">
+                                                                                    <div class="row">
+                                                                                        <label class="col-md-4">Is Active :</label>
+                                                                                        <div class="col-md-8">
+                                                                                            <select name="isAcitve" >
+                                                                                                <option value="true"
+                                                                                                        @if ($product->isActive==1)
+                                                                                                        selected
+                                                                                                    @endif
+                                                                                                >Active</option>
+                                                                                                <option value="false"
+                                                                                                        @if ($product->isActive==0)
+                                                                                                        selected
+                                                                                                    @endif
+                                                                                                >not Active</option>
+                                                                                            </select>                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
                                                                                 <div class="row">
                                                                                     <label class="col-md-4"> Image :</label>
                                                                                     <div class="col-md-8">
@@ -166,7 +186,15 @@
                 </table>
 				<!-- row -->
                 <!-- Button trigger modal -->
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
 			<!-- row -->
 				<!-- row closed -->

@@ -80,6 +80,17 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <div class="form-group mb-4">
+                                                            <div class="row">
+                                                                <label class="col-md-4">is Active :</label>
+                                                                <div class="col-md-8">
+                                                                <select name="isAcitve" id="cars">
+                                                                    <option value="true">Active</option>
+                                                                    <option value="false">not Active</option>
+                                                                </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="row">
                                                             <label class="col-md-4">Image :</label>
                                                             <div class="col-md-8">
@@ -108,7 +119,15 @@
 				<!-- row -->
                 <!-- Button trigger modal -->
 
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 			<!-- row -->
 				<!-- row closed -->
 			</div>

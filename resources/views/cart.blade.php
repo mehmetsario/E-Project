@@ -36,8 +36,8 @@
                                             </button>
                                         </form>
                                     </td>
-                                    <td class="li-product-thumbnail"><a href="#"><img src="{{'assets/site/images/product/'.$cart['image']}}" alt="Li's Product Image" width="150" height="150"></a></td>
-                                    <td class="li-product-name"><a href="#">{{$cart['name']}}</a></td>
+                                    <td class="li-product-thumbnail"><a href="{{route('singleProduct',$cart['id'])}}"><img src="{{'assets/site/images/product/'.$cart['image']}}" alt="Li's Product Image" width="150" height="150"></a></td>
+                                    <td class="li-product-name"><a href="{{route('singleProduct',$cart['id'])}}">{{$cart['name']}}</a></td>
                                     <td class="li-product-price"><span class="amount">{{$cart['price']}}</span></td>
                                     <td class="quantity">
                                         <label>Quantity update</label>
@@ -68,9 +68,6 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="coupon-all">
-                                    <div class="coupon2">
-                                        <input class="button" name="update_cart" value="Update cart" type="submit">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +78,7 @@
                                     <ul>
                                         <li>Total <span>{{Session()->get('cart')->totalPrice}}</span></li>
                                     </ul>
-                                    <a href="#">Proceed to checkout</a>
+                                    <a href="{{route('checkout')}}">Proceed to checkout</a>
                                 </div>
                             </div>
                         </div>

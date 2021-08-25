@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 
@@ -49,6 +51,7 @@ class ProductController extends Controller
             'details'=>'required',
             'price'=>'required|numeric',
             'category_id'=>'required',
+            'isActive'=>'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
 
         ]);
@@ -193,5 +196,37 @@ class ProductController extends Controller
     public function passCategory(){
         $data=Category::all();
         return view('admin.AddProduct',['item'=>$data]);
+    }
+    public function singleProduct($id){
+        $data=Product::findorfail($id);
+        return view('singleProduct',['item'=>$data]);
+
+    }
+    public function checkOut(){
+        if (Auth::check()){
+
+            return view('checkout');
+        }else {
+            return view('auth.login');
+        }
+    }
+    public function placeOrder(Request $request){
+
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'address'=>'required',
+            'phone'=>'required|min:8|max:11',
+            'wphone'=>'required|min:8|max:11',
+            'dateOfBirth'=>'required',
+            'gender'=>'required',
+            'totalPrice'=>'required',
+        ]);
+
+        $input=$request->all();
+        Order::create($input);
+        session()->forget('cart');
+        return Redirect::route('product.index')->with('success','Order was Placed');
+
     }
 }

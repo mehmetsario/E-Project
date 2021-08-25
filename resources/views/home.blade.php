@@ -106,7 +106,7 @@
                                     <!-- single-product-wrap start -->
                                     <div class="single-product-wrap">
                                         <div class="product-image">
-                                            <a href="single-product.html">
+                                            <a href="{{route('singleProduct',$item->id)}}">
                                                 <img src="{{asset('assets/site/images/product/'.$item->image)}}" alt="Li's Product Image" >
                                             </a>
                                             <span class="sticker">New</span>
@@ -115,7 +115,7 @@
                                             <div class="product_desc_info">
                                                 <div class="product-review">
                                                     <h5 class="manufacturer">
-                                                        <a href="shop-left-sidebar.html">{{$item->name}}</a>
+                                                        <a href="{{route('singleProduct',$item->id)}}">{{$item->name}}</a>
                                                     </h5>
                                                     <div class="rating-box">
                                                         <ul class="rating">
@@ -127,7 +127,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <h4><a class="product_name" href="single-product.html">{{$item->description}}</a></h4>
+                                                <h4><a class="product_name" href="{{route('singleProduct',$item->id)}}">{{$item->description}}</a></h4>
                                                 <div class="price-box">
                                                     <span class="new-price new-price-2">{{$item->price}}</span>
                                                     <span class="old-price">{{$item->price+10}}</span>
@@ -137,7 +137,7 @@
                                             <div class="add-actions">
                                                 <ul class="add-actions-link">
                                                     <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
-                                                    <li><a href="#"><i class="fa fa-eye"></i></a></li>
+                                                    <li><a href="{{route('singleProduct',$item->id)}}"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>

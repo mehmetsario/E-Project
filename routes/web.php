@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\URL;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,21 +17,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-if (\Illuminate\Support\Facades\App::environment('production')) {
-    \Illuminate\Support\Facades\URL::forceScheme('https');
+if (App::environment('production')) {
+    URL::forceScheme('https');
 }
-
-Route::get('/',[\App\Http\Controllers\ProductController::class,'index'])->name('product.index');
-Route::get('/addToCart/{productId}',[\App\Http\Controllers\ProductController::class,'addToCart'])->name('cart.add');
-Route::delete('/DeleteFromCart/{productId}',[\App\Http\Controllers\ProductController::class,'destroyCart'])->name('cart.delete');
-Route::put('/UpdateFromCart/{productId}',[\App\Http\Controllers\ProductController::class,'updateQty'])->name('cart.update');
-Route::get('/shop',[\App\Http\Controllers\ProductController::class,'shop']);
+Auth::routes();
 Route::get('/cart', function () {
     return view('cart');
-});
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+})->name('cart');
+
+Route::post('/placeOrder',[ProductController::class,'placeOrder'])->name('placeOrder');
+
+Route::get('/',[ProductController::class,'index'])->name('product.index');
+Route::get('/addToCart/{productId}',[ProductController::class,'addToCart'])->name('cart.add');
+Route::delete('/DeleteFromCart/{productId}',[ProductController::class,'destroyCart'])->name('cart.delete');
+Route::put('/UpdateFromCart/{productId}',[ProductController::class,'updateQty'])->name('cart.update');
+Route::get('/shop',[ProductController::class,'shop']);
+Route::get('/checkout',[ProductController::class,'checkOut'])->name('checkout');
+
+
+
 Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin')->middleware('admin');
@@ -38,20 +47,21 @@ Route::get('/about', function () {
 });
 Route::get('/AddCatogery', function () {
     return view('admin.addCatogery');
-})->name('addCat');;
+})->name('addCat');
 
 Route::get('/UpdateCategory', function () {
     return view('admin.UpdateCategory');
 })->name('UpdateCategory');
 
 
-Route::get('/AddProduct',[\App\Http\Controllers\ProductController::class,'passCategory'])->name('AddProduct');
+Route::get('/AddProduct',[ProductController::class,'passCategory'])->name('AddProduct');
 
-Route::get('/UpdateProducts',[\App\Http\Controllers\ProductController::class,'viewProduct'])->name('UpdateProducts');
+Route::get('/UpdateProducts',[ProductController::class,'viewProduct'])->name('UpdateProducts');
 
 
-Route::resource('categories',\App\Http\Controllers\CategoryController::class);
-Route::resource('products',\App\Http\Controllers\ProductController::class);
+Route::resource('categories',CategoryController::class);
+Route::resource('products',ProductController::class);
 
-\Illuminate\Support\Facades\Auth::routes();
+Route::get('/{productId}',[ProductController::class,'singleProduct'])->name('singleProduct');
+
 
