@@ -138,13 +138,13 @@
                                                                                     <div class="row">
                                                                                         <label class="col-md-4">Is Active :</label>
                                                                                         <div class="col-md-8">
-                                                                                            <select name="isAcitve" >
-                                                                                                <option value="true"
+                                                                                            <select name="isActive" >
+                                                                                                <option value="1"
                                                                                                         @if ($product->isActive==1)
                                                                                                         selected
                                                                                                     @endif
                                                                                                 >Active</option>
-                                                                                                <option value="false"
+                                                                                                <option value="0"
                                                                                                         @if ($product->isActive==0)
                                                                                                         selected
                                                                                                     @endif
@@ -184,6 +184,7 @@
 
                     @endforeach
                 </table>
+
 				<!-- row -->
                 <!-- Button trigger modal -->
                 @if ($errors->any())
@@ -198,7 +199,13 @@
 
 			<!-- row -->
 				<!-- row closed -->
-			</div>
+                @if (Session()->has('msg'))
+                    <div class="alert alert-success">
+
+                        {{ Session('msg') }}
+                    </div>
+                    @endif
+                    </div>
 			<!-- Container closed -->
 		</div>
 		<!-- main-content closed -->

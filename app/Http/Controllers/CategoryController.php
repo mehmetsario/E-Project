@@ -39,7 +39,7 @@ class CategoryController extends Controller
     {
 
         Category::create($this->validating());
-        return Redirect::back();
+        return Redirect::back()->with('msg',"Category was successfully Added");
     }
 
     /**
@@ -73,12 +73,14 @@ class CategoryController extends Controller
      */
     public function update(Request $request ,$id)
     {
+        $request->validate([
+            'categoryName'=>'required|min:5',
 
+        ]);
         $data=Category::findorfail($id);
-
         $data->CategoryName=$request->categoryName;
         $data->save();
-        return Redirect::back();
+        return Redirect::back()->with('msg',"Category has been Updated");
     }
 
     /**

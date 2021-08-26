@@ -14,6 +14,7 @@ class Product extends Model
         'description',
         'details',
         'image',
+        'isActive',
         'category_id'
     ];
 }

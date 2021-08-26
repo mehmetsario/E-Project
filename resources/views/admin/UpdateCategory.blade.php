@@ -99,6 +99,12 @@
                     </div>
                     @endif
 			</div>
+                    @if (Session()->has('msg'))
+                        <div class="alert alert-success">
+
+                            {{ Session('msg') }}
+                        </div>
+                    @endif
 			<!-- Container closed -->
 		</div>
 		<!-- main-content closed -->

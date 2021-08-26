@@ -14,14 +14,22 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Categories')->insert([
+        DB::table('categories')->insert([
             [
-                'categoryName'=>'Computer',
+                'categoryName'=>'SUN HAT',
             ],
             [
-                'categoryName'=>'Electronic',
+                'categoryName'=>'Accessories',
+
+            ],
+            [
+                'categoryName'=>'Handbag',
+
+            ],
+            [
+                'categoryName'=>'Shoes',
 
             ]
-                ]);
+        ]);
     }
 }

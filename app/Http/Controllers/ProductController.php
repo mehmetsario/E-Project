@@ -9,6 +9,7 @@ use App\Models\Product;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Redirect;
 
@@ -65,7 +66,7 @@ class ProductController extends Controller
 
 
         Product::create($input);
-        return Redirect::back()->with('success','Product was Added');
+        return Redirect::back()->with('msg','Product was successfuly Added');
     }
 
     /**
@@ -104,8 +105,8 @@ class ProductController extends Controller
             'description'=>'required',
             'details'=>'required',
             'price'=>'required|numeric',
+            'isActive'=>'required',
             'category_id'=>'required',
-
 
         ]);
 
@@ -114,6 +115,7 @@ class ProductController extends Controller
         $data->description=$request->description;
         $data->details=$request->details;
         $data->price=$request->price;
+        $data->isActive=$request->isActive;
         $data->category_id=$request->category_id;
 
         if ($image = $request->file('image')) {
@@ -126,7 +128,7 @@ class ProductController extends Controller
             $data['image'] = "$profileImage";
         }
         $data->save();
-        return Redirect::back();
+        return Redirect::back()->with('msg',"Product has been updated");
 
     }
 
@@ -181,11 +183,16 @@ class ProductController extends Controller
         return Redirect::back()->with('success','Product was Updated');
 
     }
-    public function shop()
+    public function shop($categoryID)
     {
-        $data=Product::all();
-        $data2=Category::all();
+        if ($categoryID==0){
+            $data=Product::all();
+            $data2=Category::all();
+            return view('shop',['items'=>$data,'Category'=>$data2]);
+        }
+        $data=Product::all()->where('category_id', $categoryID);
 
+        $data2=Category::all();
         return view('shop',['items'=>$data,'Category'=>$data2]);
     }
     public function viewProduct(){

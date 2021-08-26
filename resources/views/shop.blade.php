@@ -7,13 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9 order-1 order-lg-2">
-                    <!-- Begin Li's Banner Area -->
-                    <div class="single-banner shop-page-banner">
-                        <a href="#">
-                            <img src="images/bg-banner/2.jpg" alt="Li's Static Banner">
-                        </a>
-                    </div>
-                    <!-- Li's Banner Area End Here -->
+
                     <!-- shop-top-bar start -->
                     <div class="shop-top-bar mt-30">
                         <div class="shop-bar-inner">
@@ -26,7 +20,6 @@
                                 <!-- shop-item-filter-list end -->
                             </div>
                             <div class="toolbar-amount">
-                                <span>Showing 1 to 9 of 15</span>
                             </div>
                         </div>
 
@@ -44,7 +37,7 @@
                                             <div class="single-product-wrap">
                                                 <div class="product-image">
                                                     <a href="{{route('singleProduct',$item->id)}}">
-                                                        <img src="{{'assets/site/images/product/'.$item->image}}" alt="Li's Product Image">
+                                                        <img src="{{asset('assets/site/images/product/'.$item->image)}}" alt="Li's Product Image">
                                                     </a>
                                                     <span class="sticker">New</span>
                                                 </div>
@@ -93,7 +86,7 @@
                                             <div class="col-lg-3 col-md-5 ">
                                                 <div class="product-image">
                                                     <a href="{{route('singleProduct',$item->id)}}">
-                                                        <img src="{{'assets/site/images/product/'.$item->image}}" alt="Li's Product Image">
+                                                        <img src="{{asset('assets/site/images/product/'.$item->image)}}" alt="Li's Product Image">
                                                     </a>
                                                     <span class="sticker">New</span>
                                                 </div>
@@ -137,25 +130,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="paginatoin-area">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 pt-xs-15">
-                                        <p>Showing 1-12 of 13 item(s)</p>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <ul class="pagination-box pt-xs-20 pb-xs-15">
-                                            <li><a href="#" class="Previous"><i class="fa fa-chevron-left"></i> Previous</a>
-                                            </li>
-                                            <li class="active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li>
-                                                <a href="#" class="Next"> Next <i class="fa fa-chevron-right"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <!-- shop-products-wrapper end -->
@@ -164,13 +139,16 @@
                     <!--sidebar-categores-box start  -->
                     <div class="sidebar-categores-box mt-sm-30 mt-xs-30">
                         <div class="sidebar-title">
-                            <h2>Category</h2>
+                            <h2>Categories</h2>
                         </div>
                         <!-- category-sub-menu start -->
                         <div class="category">
                             <ul>
+                                <br>
+                                <h5>  <li class="has-sub"><a href="{{route('shop',0)}} ">ALL</a> </li></h5>
+
                                 @foreach($Category as $Category)
-                                    <h4>  <li class="has-sub"><a href="# ">{{$Category->categoryName}}</a> </li></h4>
+                                    <h5>  <li class="has-sub"><a href="{{route('shop',$Category->id)}}">{{$Category->categoryName}}</a> </li></h5>
                                 @endforeach
                             </ul>
                         </div>

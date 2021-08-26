@@ -84,9 +84,9 @@
                                                             <div class="row">
                                                                 <label class="col-md-4">is Active :</label>
                                                                 <div class="col-md-8">
-                                                                <select name="isAcitve" id="cars">
-                                                                    <option value="true">Active</option>
-                                                                    <option value="false">not Active</option>
+                                                                <select name="isActive" class="form-control form-custom mb-4">
+                                                                    <option value="1">Active</option>
+                                                                    <option value="0">not Active</option>
                                                                 </select>
                                                                 </div>
                                                             </div>
@@ -129,6 +129,12 @@
                     </div>
                 @endif
 			<!-- row -->
+                @if (Session()->has('msg'))
+                    <div class="alert alert-success">
+
+                        {{ Session('msg') }}
+                    </div>
+                @endif
 				<!-- row closed -->
 			</div>
 			<!-- Container closed -->

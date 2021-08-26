@@ -7,7 +7,7 @@
                 <div class="col-lg-3">
                     <div class="logo pb-sm-30 pb-xs-30">
                         <a href="/">
-                            <img src="images/menu/logo/1.jpg" alt="">
+                            <img src="{{asset('assets/site/images/menu/logo/1.png')}}" width="120" alt="">
                         </a>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                                     <li>
                                         <a href="single-product.html" class="minicart-product-image">
 
-                                            <img src="{{'assets/site/images/product/'.$cart['image']}}"
+                                            <img src="{{asset('assets/site/images/product/'.$cart['image'])}}"
                                                  alt="cart products">
                                         </a>
                                         <div class="minicart-product-details">
@@ -99,7 +99,7 @@
                         <nav>
                             <ul>
                                 <li><a href="/">Home</a></li>
-                                <li class="megamenu-holder"><a href="/shop">Shop</a></li>
+                                <li class="megamenu-holder"><a href="{{route('shop',0)}}">Shop</a></li>
                                 <li><a href="/about">About Us</a></li>
                                 <li><a href="/contact">Contact</a></li>
                                 @if(Auth::check())

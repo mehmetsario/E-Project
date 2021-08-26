@@ -50,7 +50,15 @@
                         </ul>
                     </div>
                     @endif
-			</div>
+
+                @if (Session()->has('msg'))
+                    <div class="alert alert-success">
+
+                                {{ Session('msg') }}
+                    </div>
+                    @endif
+
+                    </div>
 			<!-- Container closed -->
 		</div>
 		<!-- main-content closed -->

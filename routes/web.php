@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +28,13 @@ Route::get('/cart', function () {
 
 Route::post('/placeOrder',[ProductController::class,'placeOrder'])->name('placeOrder');
 
+Route::get('/viewOrders',[OrderController::class,'index'])->name('order.index');
+
 Route::get('/',[ProductController::class,'index'])->name('product.index');
 Route::get('/addToCart/{productId}',[ProductController::class,'addToCart'])->name('cart.add');
 Route::delete('/DeleteFromCart/{productId}',[ProductController::class,'destroyCart'])->name('cart.delete');
 Route::put('/UpdateFromCart/{productId}',[ProductController::class,'updateQty'])->name('cart.update');
-Route::get('/shop',[ProductController::class,'shop']);
+Route::get('shop/{categoryID}',[ProductController::class,'shop'])->name('shop');
 Route::get('/checkout',[ProductController::class,'checkOut'])->name('checkout');
 
 
