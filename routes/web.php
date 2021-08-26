@@ -27,6 +27,7 @@ Route::get('/cart', function () {
 })->name('cart');
 
 Route::post('/placeOrder',[ProductController::class,'placeOrder'])->name('placeOrder');
+Route::post('/search',[ProductController::class,'search'])->name('search');
 
 Route::get('/viewOrders',[OrderController::class,'index'])->name('order.index');
 
@@ -49,7 +50,7 @@ Route::get('/about', function () {
     return view('aboutus');
 });
 Route::get('/AddCatogery', function () {
-    return view('admin.addCatogery');
+    return view('admin.addCatogery')->middleware('admin');;
 })->name('addCat');
 
 Route::get('/UpdateCategory', function () {
@@ -57,9 +58,9 @@ Route::get('/UpdateCategory', function () {
 })->name('UpdateCategory');
 
 
-Route::get('/AddProduct',[ProductController::class,'passCategory'])->name('AddProduct');
+Route::get('/AddProduct',[ProductController::class,'passCategory'])->name('AddProduct')->middleware('admin');;
 
-Route::get('/UpdateProducts',[ProductController::class,'viewProduct'])->name('UpdateProducts');
+Route::get('/UpdateProducts',[ProductController::class,'viewProduct'])->name('UpdateProducts')->middleware('admin');;
 
 
 Route::resource('categories',CategoryController::class);

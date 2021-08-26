@@ -22,8 +22,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data=Product::all();
-
+        $data=Product::paginate(8);
         return view('home',['item'=>$data]);
     }
 
@@ -235,5 +234,12 @@ class ProductController extends Controller
         session()->forget('cart');
         return Redirect::route('product.index')->with('success','Order was Placed');
 
+    }
+    public function search(Request $request){
+        $key = trim($request->get('key'));
+        $data=Product::query()->where('name','like',"%{$key}%")
+                              ->orWhere('description','like',"%{$key}%")->get();
+        $data2=Category::all();
+        return view('shop',['items'=>$data,'Category'=>$data2]);
     }
 }

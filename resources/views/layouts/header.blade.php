@@ -15,9 +15,9 @@
                 <!-- Begin Header Middle Right Area -->
                 <ul class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                     <!-- Begin Header Middle Searchbox Area -->
-                    <form action="#" class="hm-searchbox">
-
-                        <input type="text" placeholder="Enter your search key ...">
+                    <form method="post" action="{{route('search')}}" class="hm-searchbox">
+                        @csrf
+                        <input name="key" type="text" placeholder="Enter your search key ...">
                         <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                     </form>
                     <!-- Header Middle Searchbox Area End Here -->
