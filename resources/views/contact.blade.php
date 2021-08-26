@@ -3,9 +3,6 @@
 @section('content')
     <!-- Begin Contact Main Page Area -->
     <div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
-        <div class="container mb-60">
-            <div id="google-map"></div>
-        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">

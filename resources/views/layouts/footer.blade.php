@@ -74,9 +74,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="footer-logo">
                             <img src="{{asset('assets/site/images/menu/logo/1.jpg')}}" alt="Footer Logo">
-                            <p class="info">
-                                We are a team of designers and developers that create high quality HTML Template & Woocommerce, Shopify Theme.
-                            </p>
+                                <br><br>
                         </div>
                         <ul class="des">
                             <li>
@@ -85,11 +83,11 @@
                             </li>
                             <li>
                                 <span>Phone: </span>
-                                <a href="#">(+123) 123 321 345</a>
+                                <a href="#">(+000) 123 123 123</a>
                             </li>
                             <li>
                                 <span>Email: </span>
-                                <a href="mailto://info@yourdomain.com">info@yourdomain.com</a>
+                                <a >info@yourdomain.com</a>
                             </li>
                         </ul>
                     </div>
@@ -132,19 +130,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- Begin Footer Newsletter Area -->
-                        <div class="footer-newsletter">
-                            <h4>Sign up to newsletter</h4>
-                            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="footer-subscribe-form validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div id="mc-form" class="mc-form subscribe-form form-group" >
-                                        <input id="mc-email" type="email" autocomplete="off" placeholder="Enter your email" />
-                                        <button  class="btn" id="mc-submit">Subscribe</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Footer Newsletter Area End Here -->
                     </div>
                     <!-- Footer Block Area End Here -->
                 </div>
