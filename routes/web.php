@@ -50,8 +50,8 @@ Route::get('/about', function () {
     return view('aboutus');
 });
 Route::get('/AddCatogery', function () {
-    return view('admin.addCatogery')->middleware('admin');;
-})->name('addCat');
+    return view('admin.addCatogery');
+})->name('addCat')->middleware('admin');;
 
 Route::get('/UpdateCategory', function () {
     return view('admin.UpdateCategory');
