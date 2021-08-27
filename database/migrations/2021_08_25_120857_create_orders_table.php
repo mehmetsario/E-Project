@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string ('wphone');
             $table->date('dateOfBirth');
             $table->string('gender');
-            $table->integer('totalPrice');
+            $table->integer('totalprice');
             $table->timestamps();
         });
     }
