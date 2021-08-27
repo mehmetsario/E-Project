@@ -65,8 +65,11 @@
                                                     <div class="add-actions">
                                                         <ul class="add-actions-link">
 
-                                                            <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
-
+                                                            @if($item->isActive==1)
+                                                                <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
+                                                            @else
+                                                                <li class="add-cart active"><a style="color: red">Not Available</a></li>
+                                                            @endif
                                                             <li><a href="{{route('singleProduct',$item->id)}}" title="quick view" class="quick-view-btn" ><i class="fa fa-eye"></i></a></li>
                                                         </ul>
                                                     </div>
@@ -119,8 +122,11 @@
                                             <div class="col-lg-4">
                                                 <div class="shop-add-action mb-xs-30">
                                                     <ul class="add-actions-link">
-                                                        <li class="add-cart"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
-                                                        <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i>Quick view</a></li>
+                                                        @if($item->isActive==1)
+                                                            <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
+                                                        @else
+                                                            <li class="add-cart active"><a style="color: red" >Not Available</a></li>
+                                                        @endif                                                        <li><a class="quick-view" data-toggle="modal" data-target="#exampleModalCenter" href="#"><i class="fa fa-eye"></i>Quick view</a></li>
                                                     </ul>
                                                 </div>
                                             </div>

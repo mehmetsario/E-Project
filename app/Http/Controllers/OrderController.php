@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -82,5 +84,20 @@ class OrderController extends Controller
     public function destroy(Order $order)
     {
         //
+    }
+    public function getOrders(){
+        $data=DB::table('orders')
+            ->groupBy('name')
+            ->select('name', DB::raw('SUM(totalPrice) As totalPrice'))
+            ->orderBy('totalPrice','DESC')
+            ->paginate(10);;
+
+        return view('admin.bestUsers',['orders'=>$data]);
+    }
+    public function getProductSale(){
+        $data=Product::query()->where('total_sale','<>','0')->orderBy('total_sale','DESC')
+            ->paginate(10);
+
+        return view('admin.bestProduct',['total_sale'=>$data]);
     }
 }

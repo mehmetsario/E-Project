@@ -141,7 +141,7 @@ class ProductController extends Controller
     {
         $data=Product::findorfail($id);
         $data->delete();
-        return Redirect::back();
+        return Redirect::back()->with('msg',"Product has been deleted");
 
     }
     function addToCart(Product $productId){
@@ -229,9 +229,15 @@ class ProductController extends Controller
             'totalPrice'=>'required',
         ]);
 
+        foreach ($request->cartItems as $cartItems){
+            $data=Product::findorfail($cartItems);
+            $data->total_sale+=1;
+            $data->save();
+        }
         $input=$request->all();
         Order::create($input);
         session()->forget('cart');
+
         return Redirect::route('product.index')->with('success','Order was Placed');
 
     }

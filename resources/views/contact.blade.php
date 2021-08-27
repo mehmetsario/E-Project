@@ -29,34 +29,52 @@
                     <div class="contact-form-content pt-sm-55 pt-xs-55">
                         <h3 class="contact-page-title">Tell Us Your Message</h3>
                         <div class="contact-form">
-                            <form  id="contact-form" action="http://demo.hasthemes.com/limupa-v3/limupa/mail.php" method="post">
+                            <form   action="{{route('sendMessage')}}" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <label>Your Name <span class="required">*</span></label>
-                                    <input type="text" name="customerName" id="customername" required>
+                                    <input type="text" name="name" id="customername" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Your Email <span class="required">*</span></label>
-                                    <input type="email" name="customerEmail" id="customerEmail" required>
+                                    <input type="email" name="email" id="customerEmail" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <input type="text" name="contactSubject" id="contactSubject">
+                                    <input type="text" name="subject" id="contactSubject">
                                 </div>
                                 <div class="form-group mb-30">
                                     <label>Your Message</label>
-                                    <textarea name="contactMessage" id="contactMessage" ></textarea>
+                                    <textarea name="message" id="contactMessage" ></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" value="submit" id="submit" class="li-btn-3" name="submit">send</button>
                                 </div>
                             </form>
                         </div>
-                        <p class="form-messege"></p>
+
                     </div>
+
                 </div>
             </div>
         </div>
+
     </div>
     <!-- Contact Main Page Area End Here -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if (Session()->has('msg'))
+        <div class="alert alert-success">
+            {{ Session('msg') }}
+        </div>
+    @endif
 
 @endsection

@@ -136,8 +136,12 @@
                                             </div>
                                             <div class="add-actions">
                                                 <ul class="add-actions-link">
+                                                    @if($item->isActive==1)
                                                     <li class="add-cart active"><a href="{{route('cart.add',$item->id)}}">Add to cart</a></li>
-                                                    <li><a href="{{route('singleProduct',$item->id)}}"><i class="fa fa-eye"></i></a></li>
+                                                    @else
+                                                        <li class="add-cart active"><a style="color: red" >Not Available</a></li>
+                                                    @endif
+                                                        <li><a href="{{route('singleProduct',$item->id)}}"><i class="fa fa-eye"></i></a></li>
                                                 </ul>
                                             </div>
                                         </div>
