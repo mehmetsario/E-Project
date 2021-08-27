@@ -53,7 +53,7 @@
                                             <td>{{$order->phone}}</td>
                                             <td>{{$order->wphone}}</td>
                                             <td>{{$order->gender}}</td>
-                                            <td>{{$order->totalPrice}}</td>
+                                            <td>{{$order->totalprice}}</td>
                                             <td>{{$order->created_at}}</td>
                                         </tr>
                                         @endforeach
