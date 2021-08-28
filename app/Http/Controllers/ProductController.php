@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,7 +23,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data=Product::paginate(8);
+        $data=DB::table('products')->latest('created_at')->paginate(8);
         return view('home',['item'=>$data]);
     }
 
@@ -247,5 +248,19 @@ class ProductController extends Controller
                               ->orWhere('description','like',"%{$key}%")->get();
         $data2=Category::all();
         return view('shop',['items'=>$data,'Category'=>$data2]);
+    }
+    public function getInformation (){
+        $data=DB::table('products')->count();
+        $data2=DB::table('categories')->count();
+        $data3=DB::table('orders')->count();
+        $data4= DB::table('orders')->sum('total_price');
+        $data5=User::all();
+
+        return view('admin.index',['item1'=>$data,
+                                        'item2'=>$data2,
+                                        'item3'=>$data3,
+                                        'item4'=>$data4,
+                                        'item5'=>$data5
+        ]);
     }
 }

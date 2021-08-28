@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.addCatogery');
     }
 
     /**
@@ -48,9 +48,8 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show()
     {
-        //
     }
 
     /**
@@ -93,7 +92,7 @@ class CategoryController extends Controller
     {
         $data=Category::findorfail($id);
         $data->delete();
-        return Redirect::back();
+        return Redirect::back()->with('msg',"Category has been deleted");
 
     }
     protected function validating(){

@@ -48,7 +48,7 @@
                             @else
                                 @foreach(session()->get('cart')->items as $cart)
                                     <li>
-                                        <a href="single-product.html" class="minicart-product-image">
+                                        <a href="#" class="minicart-product-image">
 
                                             <img src="{{asset('assets/site/images/product/'.$cart['image'])}}"
                                                  alt="cart products">
@@ -70,7 +70,7 @@
                         </ul>
                         <p class="minicart-total">SUBTOTAL: <span>{{session()->get('cart')->total_price}} $</span></p>
                         <div class="minicart-button">
-                            <a href="/cart" class="li-button li-button-fullwidth li-button-dark">
+                            <a href="{{route('cart')}}" class="li-button li-button-fullwidth li-button-dark">
                                 <span>View Full Cart</span>
                             </a>
 
@@ -100,11 +100,11 @@
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li class="megamenu-holder"><a href="{{route('shop',0)}}">Shop</a></li>
-                                <li><a href="/about">About Us</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="{{route('aboutUs')}}">About Us</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
                                 @if(Auth::check())
                                     @if (Auth::user()->is_admin==1)
-                                        <li><a href="/admin">Dashboard</a></li>
+                                        <li><a href="{{route('admin')}}">Dashboard</a></li>
                                         <li> <form  id="my_form" method="Post" action="{{route('logout')}}">
                                             @csrf
                                             <a href="javascript:{}" onclick="document.getElementById('my_form').submit();">LogOut: {{Auth::user()->name}}</a>
