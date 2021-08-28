@@ -77,7 +77,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+
     }
 
     /**
@@ -145,6 +145,10 @@ class ProductController extends Controller
         return Redirect::back()->with('msg',"Product has been deleted");
 
     }
+
+    /**
+     * Add product to shopping cart in session
+     */
     function addToCart(Product $productId){
         if(session()->has('cart')){
             $cart=new Cart(session()->get('cart'));
@@ -153,12 +157,13 @@ class ProductController extends Controller
             $cart= new Cart();
         }
         $cart->add($productId);
-//        dd($cart);
         session()->put('cart',$cart);
-//       dd(session()->get('cart')->items[1]);
         return Redirect::back()->with('success','Product was Added');
 
     }
+    /**
+     * Delete  product from shopping cart in session
+     */
     function destroyCart (Product $productId){
         $cart=new Cart(session()->get('cart'));
         $cart->remove($productId->id);
@@ -170,97 +175,17 @@ class ProductController extends Controller
         return Redirect::back()->with('success','Product was removed');
 
     }
+    /**
+     * Update quantity of  product in shopping cart in session
+     */
     function updateQty (Request $request,Product $productId){
-//        dd($request);
+
         $request->validate([
             'qty'=>'required|numeric|min:1'
         ]);
         $cart=new Cart(session()->get('cart'));
         $cart->updateQty($productId->id,$request->qty);
-//
         session()->put('cart',$cart);
-
         return Redirect::back()->with('success','Product was Updated');
-
-    }
-    public function shop($categoryID)
-    {
-        if ($categoryID==0){
-            $data=Product::all();
-            $data2=Category::all();
-            return view('shop',['items'=>$data,'Category'=>$data2]);
-        }
-        $data=Product::all()->where('category_id', $categoryID);
-
-        $data2=Category::all();
-        return view('shop',['items'=>$data,'Category'=>$data2]);
-    }
-    public function viewProduct(){
-        $data=Product::all();
-        $data2=Category::all();
-        return view('admin.UpdateProduct',['item'=>$data,'categories'=>$data2]);
-    }
-    public function passCategory(){
-        $data=Category::all();
-        return view('admin.AddProduct',['item'=>$data]);
-    }
-    public function singleProduct($id){
-        $data=Product::findorfail($id);
-        return view('singleProduct',['item'=>$data]);
-
-    }
-    public function checkOut(){
-        if (Auth::check()){
-
-            return view('checkout');
-        }else {
-            return view('auth.login');
-        }
-    }
-    public function placeOrder(Request $request){
-
-        $request->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'address'=>'required',
-            'phone'=>'required|min:8|max:11',
-            'wphone'=>'required|min:8|max:11',
-            'dateOfBirth'=>'required',
-            'gender'=>'required',
-            'total_price'=>'required',
-        ]);
-
-        foreach ($request->cartItems as $cartItems){
-            $data=Product::findorfail($cartItems);
-            $data->total_sale+=1;
-            $data->save();
-        }
-        $input=$request->all();
-        Order::create($input);
-        session()->forget('cart');
-
-        return Redirect::route('product.index')->with('success','Order was Placed');
-
-    }
-    public function search(Request $request){
-        $key = trim($request->get('key'));
-        $data=Product::query()->where('name','like',"%{$key}%")
-                              ->orWhere('description','like',"%{$key}%")->get();
-        $data2=Category::all();
-        return view('shop',['items'=>$data,'Category'=>$data2]);
-    }
-    public function getInformation (){
-        $data=DB::table('products')->count();
-        $data2=DB::table('categories')->count();
-        $data3=DB::table('orders')->count();
-        $data4= DB::table('orders')->sum('total_price');
-        $data5=User::all();
-
-        return view('admin.index',['item1'=>$data,
-                                        'item2'=>$data2,
-                                        'item3'=>$data3,
-                                        'item4'=>$data4,
-                                        'item5'=>$data5
-        ]);
     }
 }

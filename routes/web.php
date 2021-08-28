@@ -26,16 +26,13 @@ if (App::environment('production')) {
 // Authenticating routes:
 Auth::routes();
 
-// MoveOnSiteController routes:
 
-Route::get('/cart',[MoveOnSiteController::class,'goToCart'])->name('cart');
-Route::get('/contact',[MoveOnSiteController::class,'goToContact'])->name('contact');
-Route::get('/aboutUs',[MoveOnSiteController::class,'goToAbout'])->name('aboutUs');
 
 // OrderController routes :
 Route::get('/getOrders',[OrderController::class,'getOrders'])->name('getOrders')->middleware('admin');
 Route::get('/getProductSale',[OrderController::class,'getProductSale'])->name('getProductSale')->middleware('admin');
 Route::get('/viewOrders',[OrderController::class,'index'])->name('order.index')->middleware('admin');
+Route::post('/placeOrder',[OrderController::class,'placeOrder'])->name('placeOrder');
 
 //CategoryController routes:
 Route::resource('categories',CategoryController::class)->middleware('admin');
@@ -50,21 +47,25 @@ Route::get('/getMessages',[MessageController::class,'getMessage'])->name('getMes
 Route::DELETE('/messageDestroy/{id}',[MessageController::class,'messageDestroy'])->name('messageDestroy')->middleware('admin');
 
 // ProductController routes:
-Route::get('/admin',[ProductController::class,'getInformation'])->name('admin')->middleware('admin');
 Route::resource('products',ProductController::class);
-Route::post('/placeOrder',[ProductController::class,'placeOrder'])->name('placeOrder');
-Route::post('/search',[ProductController::class,'search'])->name('search');
 Route::get('/',[ProductController::class,'index'])->name('product.index');
 Route::get('/addToCart/{productId}',[ProductController::class,'addToCart'])->name('cart.add');
 Route::delete('/DeleteFromCart/{productId}',[ProductController::class,'destroyCart'])->name('cart.delete');
 Route::put('/UpdateFromCart/{productId}',[ProductController::class,'updateQty'])->name('cart.update');
-Route::get('shop/{categoryID}',[ProductController::class,'shop'])->name('shop');
-Route::get('/checkout',[ProductController::class,'checkOut'])->name('checkout');
-Route::get('/AddProduct',[ProductController::class,'passCategory'])->name('AddProduct')->middleware('admin');
-Route::get('/UpdateProducts',[ProductController::class,'viewProduct'])->name('UpdateProducts')->middleware('admin');
-Route::get('/{productId}',[ProductController::class,'singleProduct'])->name('singleProduct');
 
 
+// MoveOnSiteController routes:
+
+Route::get('/cart',[MoveOnSiteController::class,'goToCart'])->name('cart');
+Route::get('/contact',[MoveOnSiteController::class,'goToContact'])->name('contact');
+Route::get('/aboutUs',[MoveOnSiteController::class,'goToAbout'])->name('aboutUs');
+Route::get('/checkout',[MoveOnSiteController::class,'checkOut'])->name('checkout');
+Route::get('shop/{categoryID}',[MoveOnSiteController::class,'shop'])->name('shop');
+Route::post('/search',[MoveOnSiteController::class,'search'])->name('search');
+Route::get('/admin',[MoveOnSiteController::class,'getInformation'])->name('admin')->middleware('admin');
+Route::get('/UpdateProducts',[MoveOnSiteController::class,'viewProduct'])->name('UpdateProducts')->middleware('admin');
+Route::get('/AddProduct',[MoveOnSiteController::class,'prepareToAddProduct'])->name('AddProduct')->middleware('admin');
+Route::get('/{productId}',[MoveOnSiteController::class,'singleProduct'])->name('singleProduct');
 
 
 

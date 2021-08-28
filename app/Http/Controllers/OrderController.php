@@ -6,6 +6,7 @@ use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class OrderController extends Controller
 {
@@ -85,6 +86,10 @@ class OrderController extends Controller
     {
         //
     }
+
+    /**
+     * get orders and query for best 10 users do shopping according to total paid money
+     */
     public function getOrders(){
         $data=DB::table('orders')
             ->selectraw('name,SUM(orders.total_price) As total_price')
@@ -94,10 +99,42 @@ class OrderController extends Controller
 
         return view('admin.bestUsers',['orders'=>$data]);
     }
+
+    /**
+     * Query for best 10 product that was sold in site
+     */
     public function getProductSale(){
         $data=Product::query()->where('total_sale','<>','0')->orderBy('total_sale','DESC')
             ->paginate(10);
 
         return view('admin.bestProduct',['total_sale'=>$data]);
+    }
+
+    /**
+     * Place order :
+     */
+    public function placeOrder(Request $request){
+
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'address'=>'required',
+            'phone'=>'required|min:8|max:11',
+            'wphone'=>'required|min:8|max:11',
+            'dateOfBirth'=>'required',
+            'gender'=>'required',
+            'total_price'=>'required',
+        ]);
+
+        foreach ($request->cartItems as $cartItems){
+            $data=Product::findorfail($cartItems);
+            $data->total_sale+=1;
+            $data->save();
+        }
+        $input=$request->all();
+        Order::create($input);
+        session()->forget('cart');
+
+        return Redirect::route('product.index')->with('success','Order was Placed');
     }
 }

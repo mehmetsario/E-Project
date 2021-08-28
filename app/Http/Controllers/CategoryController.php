@@ -74,7 +74,6 @@ class CategoryController extends Controller
     {
         $request->validate([
             'categoryName'=>'required|min:5',
-
         ]);
         $data=Category::findorfail($id);
         $data->CategoryName=$request->categoryName;
@@ -95,6 +94,9 @@ class CategoryController extends Controller
         return Redirect::back()->with('msg',"Category has been deleted");
 
     }
+    /**
+     * Validating data before Editing
+     */
     protected function validating(){
         return   $validated= request()->validate([
             'categoryName'=>['required','min:5','max:25']
