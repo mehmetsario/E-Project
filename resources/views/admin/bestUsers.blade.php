@@ -26,7 +26,7 @@
                                     @foreach($orders as $order)
                                     <div class="list-group-item">
                                         <i class="fas fa-user"></i>
-                                        <p>{{$order->name}}</p><span>{{$order->totalprice}}</span>
+                                        <p>{{$order->name}}</p><span>{{$order->totalPrice}}</span>
                                     </div>
                                     @endforeach
                                 </div>
