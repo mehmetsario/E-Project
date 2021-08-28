@@ -17,16 +17,16 @@
 
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <label>Name <span class="required">*</span></label>
-                                            <input name="name" placeholder="" type="text" value="{{Auth::user()->name}}"
-                                                   readonly>
+{{--                                            <label>Name <span class="required">*</span></label>--}}
+                                            <input name="name" placeholder="" type="text" value="{{Auth::user()->name }}"
+                                                   readonly hidden>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="checkout-form-list">
-                                            <label>Email: <span class="required">*</span></label>
+{{--                                            <label>Email: <span class="required">*</span></label>--}}
                                             <input name="email" placeholder="" type="email"
-                                                   value="{{Auth::user()->email}}" readonly>
+                                                   value="{{Auth::user()->email}}" readonly hidden>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
