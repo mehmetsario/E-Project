@@ -89,7 +89,7 @@ class OrderController extends Controller
         $data=DB::table('orders')
             ->selectraw('name,SUM(orders.total_price) As total_price')
             ->groupBy('name')
-            ->orderBy("orders.total_price",'DESC')
+            ->orderBy("total_price",'DESC')
             ->paginate(10);
 
         return view('admin.bestUsers',['orders'=>$data]);
