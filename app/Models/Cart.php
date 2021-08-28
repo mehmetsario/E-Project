@@ -8,7 +8,7 @@ class Cart
 {
     public $items = [];
     public $totalQty;
-    public $totalPrice;
+    public $total_price;
     public $itemPrice;
     public $itemQty;
 
@@ -19,11 +19,11 @@ class Cart
 
             $this->items += $cart->items;
             $this->totalQty = $cart->totalQty;
-            $this->totalPrice = $cart->totalPrice;
+            $this->total_price = $cart->total_price;
         } else {
             $this->items = [];
             $this->totalQty = 0;
-            $this->totalPrice = 0;
+            $this->total_price = 0;
         }
 
     }
@@ -40,10 +40,10 @@ class Cart
         if (!array_key_exists($product->id, $this->items)) {
             $this->items[$product->id] = $item;
             $this->totalQty += 1;
-            $this->totalPrice += $product->price;
+            $this->total_price += $product->price;
         } else {
             $this->totalQty += 1;
-            $this->totalPrice += $product->price;
+            $this->total_price += $product->price;
         }
         $this->items[$product->id]['qty'] += 1;
 
@@ -53,17 +53,17 @@ class Cart
     {
         if (array_key_exists($id, $this->items)) {
             $this->totalQty -= $this->items[$id]['qty'];
-            $this->totalPrice -= $this->items[$id]['qty']*$this->items[$id]['price'];
+            $this->total_price -= $this->items[$id]['qty']*$this->items[$id]['price'];
             unset($this->items[$id]);
         }
     }
     public function updateQty($id,$qty){
         $this->totalQty -=$this->items[$id]['qty'];
-        $this->totalPrice-=$this->items[$id]['qty']*$this->items[$id]['price'];
+        $this->total_price-=$this->items[$id]['qty']*$this->items[$id]['price'];
 
         $this->items[$id]['qty']=$qty;
 
         $this->totalQty+=$qty;
-        $this->totalPrice+=$this->items[$id]['price']*$qty;
+        $this->total_price+=$this->items[$id]['price']*$qty;
     }
 }

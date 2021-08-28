@@ -28,7 +28,7 @@
                             <li class="hm-minicart">
                                 <div class="hm-minicart-trigger">
                                     <span class="item-icon"></span>
-                                    <span class="item-text">{{session()->has('cart')? session()->get('cart')->totalPrice:'0'}} $
+                                    <span class="item-text">{{session()->has('cart')? session()->get('cart')->total_price:'0'}} $
                                                     <span
                                                         class="cart-item-count">{{session()->has('cart')? session()->get('cart')->totalQty:'0'}}</span>
                                                 </span>
@@ -68,7 +68,7 @@
                                     </li>
                                 @endforeach
                         </ul>
-                        <p class="minicart-total">SUBTOTAL: <span>{{session()->get('cart')->totalPrice}} $</span></p>
+                        <p class="minicart-total">SUBTOTAL: <span>{{session()->get('cart')->total_price}} $</span></p>
                         <div class="minicart-button">
                             <a href="/cart" class="li-button li-button-fullwidth li-button-dark">
                                 <span>View Full Cart</span>

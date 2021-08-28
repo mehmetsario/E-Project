@@ -226,7 +226,7 @@ class ProductController extends Controller
             'wphone'=>'required|min:8|max:11',
             'dateOfBirth'=>'required',
             'gender'=>'required',
-            'totalPrice'=>'required',
+            'total_price'=>'required',
         ]);
 
         foreach ($request->cartItems as $cartItems){

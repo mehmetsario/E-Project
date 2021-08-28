@@ -76,7 +76,7 @@
                                 <div class="cart-page-total">
                                     <h2>Cart totals</h2>
                                     <ul>
-                                        <li>Total <span>{{Session()->get('cart')->totalPrice}}</span></li>
+                                        <li>Total <span>{{Session()->get('cart')->total_price}}</span></li>
                                     </ul>
                                     <a href="{{route('checkout')}}">Proceed to checkout</a>
                                 </div>

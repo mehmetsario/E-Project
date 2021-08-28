@@ -64,7 +64,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <input hidden name="totalPrice" value="{{session()->get('cart')->totalPrice}}"/>
+                                    <input hidden name="total_price" value="{{session()->get('cart')->total_price}}"/>
                                 </div>
 
                             </div>
@@ -96,7 +96,7 @@
                                     <tr class="order-total">
                                         <th>Order Total</th>
                                         <td><strong><span
-                                                    class="amount">{{session()->get('cart')->totalPrice}}</span></strong>
+                                                    class="amount">{{session()->get('cart')->total_price}}</span></strong>
                                         </td>
                                     </tr>
                                     </tfoot>

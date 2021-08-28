@@ -16,7 +16,7 @@ class Order extends Model
         'wphone',
         'dateOfBirth',
         'gender',
-        'totalPrice'
+        'total_price'
     ];
 
 }
