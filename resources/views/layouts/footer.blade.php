@@ -99,32 +99,32 @@
                             <h3 class="footer-block-title">Follow Us</h3>
                             <ul class="social-link">
                                 <li class="twitter">
-                                    <a href="https://twitter.com/" data-toggle="tooltip" target="_blank" title="Twitter">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="Twitter">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li class="rss">
-                                    <a href="https://rss.com/" data-toggle="tooltip" target="_blank" title="RSS">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="RSS">
                                         <i class="fa fa-rss"></i>
                                     </a>
                                 </li>
                                 <li class="google-plus">
-                                    <a href="https://www.plus.google.com/discover" data-toggle="tooltip" target="_blank" title="Google Plus">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="Google Plus">
                                         <i class="fa fa-google-plus"></i>
                                     </a>
                                 </li>
                                 <li class="facebook">
-                                    <a href="https://www.facebook.com/" data-toggle="tooltip" target="_blank" title="Facebook">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="Facebook">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li class="youtube">
-                                    <a href="https://www.youtube.com/" data-toggle="tooltip" target="_blank" title="Youtube">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="Youtube">
                                         <i class="fa fa-youtube"></i>
                                     </a>
                                 </li>
                                 <li class="instagram">
-                                    <a href="https://www.instagram.com/" data-toggle="tooltip" target="_blank" title="Instagram">
+                                    <a href="#" data-toggle="tooltip" target="_blank" title="Instagram">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -135,26 +135,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div></div>
     <!-- Footer Static Middle Area End Here -->
-    <!-- Begin Footer Static Bottom Area -->
-    <div class="footer-static-bottom pt-55 pb-55">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
 
-                    <!-- Begin Footer Payment Area -->
-                    <div class="copyright text-center">
-                        <a href="#">
-                            <img src="{{asset('assets/site/images/payment/1.png')}}" alt="">
-                        </a>
-                    </div>
-                    <!-- Footer Payment Area End Here -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Static Bottom Area End Here -->
 </div>
 <!-- Footer Area End Here -->
 <!-- jQuery-V1.12.4 -->

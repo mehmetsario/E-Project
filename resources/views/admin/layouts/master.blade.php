@@ -25,7 +25,6 @@
 				@yield('page-header')
 				@yield('content')
 				@include('admin.layouts.sidebar')
-				@include('admin.layouts.models')
             	@include('admin.layouts.footer')
 				@include('admin.layouts.footer-scripts')
 	</body>
