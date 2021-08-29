@@ -43,7 +43,7 @@ Route::delete('/users/{id}',[UserController::class,'destroy'])->name('user.destr
 
 // MessageController routes :
 Route::post('/sendMessage',[MessageController::class,'sendMessage'])->name('sendMessage');
-Route::get('/getMessages',[MessageController::class,'getMessage'])->name('getMessages')->middleware('admin');;
+Route::get('/getMessages',[MessageController::class,'getMessage'])->name('getMessages')->middleware('admin');
 Route::DELETE('/messageDestroy/{id}',[MessageController::class,'messageDestroy'])->name('messageDestroy')->middleware('admin');
 
 // ProductController routes:

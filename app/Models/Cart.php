@@ -6,11 +6,14 @@ use Illuminate\Support\Facades\Session;
 
 class Cart
 {
+    //Preparing variables to use it
     public $items = [];
     public $totalQty;
     public $total_price;
     public $itemPrice;
     public $itemQty;
+
+    //Main constructor to check if there is item in cart or not
 
     public function __Construct($cart = null)
     {
@@ -27,6 +30,7 @@ class Cart
         }
 
     }
+    // Add function to add product to cart
 
     public function add($product)
     {
@@ -49,6 +53,7 @@ class Cart
 
     }
 
+    // Remove function to remove product from cart
     public function remove($id)
     {
         if (array_key_exists($id, $this->items)) {
@@ -57,12 +62,12 @@ class Cart
             unset($this->items[$id]);
         }
     }
+    // updateQty function to edit quantity of product
+
     public function updateQty($id,$qty){
         $this->totalQty -=$this->items[$id]['qty'];
         $this->total_price-=$this->items[$id]['qty']*$this->items[$id]['price'];
-
         $this->items[$id]['qty']=$qty;
-
         $this->totalQty+=$qty;
         $this->total_price+=$this->items[$id]['price']*$qty;
     }
